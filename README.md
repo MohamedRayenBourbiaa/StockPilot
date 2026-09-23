@@ -142,12 +142,11 @@ Tables principales de la base `stockpilot` :
 | `services` / `categories` | Référentiels internes |
 
 ---
-
 ## 🚀 Installation locale
 
 1. **Cloner le repo** dans le dossier `htdocs/` de XAMPP :
 ```bash
-   git clone https://github.com/<ton-user>/stockpilot-xampp.git
+   git clone https://github.com/MohamedRayenBourbiaa/StockPilot.git
 ```
 
 2. **Démarrer Apache et MySQL** depuis le panneau de contrôle XAMPP
@@ -162,3 +161,6 @@ Tables principales de la base `stockpilot` :
    - (Optionnel) configurer les identifiants SMTP pour la récupération de mot de passe
 
 5. **Accéder à l'application** :
+```
+   http://localhost/StockPilot/
+```
