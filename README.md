@@ -51,11 +51,11 @@ Ce projet a été réalisé en autonomie, de la conception de la base de donnée
 
 | Tableau de bord | Gestion des articles |
 |:---:|:---:|
-| ![Dashboard](screenshots/dashboard.png) | ![Articles](screenshots/articles.png) |
+| ![Dashboard](screenshotsdashboard.png) | ![Articles](screenshotsarticles.png) |
 
 | Gestion des demandes | Historique des mouvements |
 |:---:|:---:|
-| ![Demandes](screenshots/demandes.png) | ![Historique](screenshots/historique.png) |
+| ![Demandes](screenshotsdemandes.png) | ![Historique](screenshotshistorique.png) |
 
 ---
 
