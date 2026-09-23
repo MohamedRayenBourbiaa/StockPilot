@@ -70,3 +70,95 @@ L'application repose sur une séparation claire entre les **services** (départe
 | 🏭 **Responsable Service** | Restreint | Création de demandes de consommables pour son service, suivi de leur statut |
 
 **Cycle de vie d'une demande :**
+
+---
+
+## ⚙️ Fonctionnalités détaillées
+
+### 📦 Articles
+- Ajout, modification, suppression (CRUD complet)
+- Classement par catégories
+- Seuils de stock **min / max** configurables par article
+- Détection automatique des articles en rupture ou sous le seuil
+
+### 🚚 Fournisseurs
+- Gestion des fiches fournisseurs liées aux commandes
+- Historique des commandes par fournisseur
+
+### 📋 Demandes
+- Création de demandes multi-articles par service
+- **Validation automatique** dès que le stock redevient suffisant
+- Gestion des **demandes partielles** (fulfillment partiel en cas de sur-demande)
+- Statuts : *en attente* / *validée*
+
+### 🕓 Historique
+- Traçabilité complète de tous les mouvements de stock (entrées/sorties)
+- Filtres par type, date, service
+- **Export PDF / Word / Excel**
+
+### 🔔 Alertes
+- Notifications automatiques sur les articles en stock critique ou bas
+- Tableau de bord centralisant les alertes actives
+
+### 🔐 Authentification
+- Connexion par session PHP
+- Contrôle d'accès basé sur les rôles (RBAC)
+- Récupération de mot de passe par email (SMTP)
+
+---
+
+## 🛠️ Stack technique
+
+| Composant | Technologie |
+|---|---|
+| Langage backend | PHP |
+| Base de données | MySQL |
+| Accès données | PDO (requêtes préparées) |
+| Frontend | JavaScript, HTML, CSS |
+| Serveur | Apache (XAMPP) |
+| Emails | SMTP (Gmail) |
+
+---
+
+## 🏗️ Architecture & structure du projet
+
+L'application suit une architecture simple **API REST maison + SPA** : le frontend (`index.html` + JS) communique avec les endpoints PHP sous `api/` via des requêtes JSON.
+
+---
+
+## 🗄️ Modèle de données
+
+Tables principales de la base `stockpilot` :
+
+| Table | Rôle |
+|---|---|
+| `utilisateurs` | Comptes, rôles, services |
+| `articles` | Catalogue des consommables, seuils min/max |
+| `fournisseurs` | Fiches fournisseurs |
+| `demandes` / `demande_lignes` | Demandes internes et leurs lignes d'articles |
+| `commandes` | Commandes passées aux fournisseurs |
+| `historique` | Journal de tous les mouvements de stock |
+| `alertes_historique` | Historique des alertes de stock déclenchées |
+| `services` / `categories` | Référentiels internes |
+
+---
+
+## 🚀 Installation locale
+
+1. **Cloner le repo** dans le dossier `htdocs/` de XAMPP :
+```bash
+   git clone https://github.com/<ton-user>/stockpilot-xampp.git
+```
+
+2. **Démarrer Apache et MySQL** depuis le panneau de contrôle XAMPP
+
+3. **Importer la base de données** :
+   - Ouvrir phpMyAdmin
+   - Créer une base nommée `stockpilot`
+   - Importer le fichier `database.sql`
+
+4. **Configurer `config.php`** :
+   - Renseigner les identifiants de connexion à la base
+   - (Optionnel) configurer les identifiants SMTP pour la récupération de mot de passe
+
+5. **Accéder à l'application** :
