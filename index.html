@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vectorys — Système intelligent de gestion des ressources</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#4a3c2a;
+  --navy-900:#5c4a34;
+  --navy-800:#6b5940;
+  --navy-700:#8a7355;
+  --blue-600:#a6835a;
+  --blue-500:#c2a878;
+  --blue-100:#f5ecdf;
+  --bg:#f6f3ee;
+  --card:#ffffff;
+  --border:#e6e9f2;
+  --text:#16213e;
+  --text-dim:#6b7488;
+  --text-faint:#9aa2b6;
+  --green:#16a34a;
+  --green-bg:#dcfce7;
+  --amber:#d97706;
+  --amber-bg:#fef3c7;
+  --red:#dc2626;
+  --red-bg:#fee2e2;
+  --teal:#0d9488;
+  --teal-bg:#ccfbf1;
+  --purple:#7c3aed;
+  --purple-bg:#ede9fe;
+  --radius:12px;
+  --shadow:0 1px 2px rgba(15,24,48,.04), 0 8px 24px -12px rgba(15,24,48,.10);
+
+  /* Identité Vectorys — utilisées uniquement pour l'écran de connexion (#login-screen) */
+  --vx-navy:#a6835a;
+  --vx-navy-dark:#8a6d4f;
+  --vx-navy-light:#c2a878;
+  --vx-green:#74bc1f;
+  --vx-green-dark:#5c9518;
+  --vx-gray:#88898d;
+  --vx-gray-light:#f3f4f5;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;height:100%;}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;cursor:pointer;}
+input,select{font-family:inherit;}
+::selection{background:var(--blue-100);}
+a{color:inherit;text-decoration:none;}
+
+/* ---------- LOGIN ---------- */
+#login-screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(160deg,#ffffff 0%,#f3efe8 100%);
+  padding:24px;
+}
+.login-card{
+  width:100%;
+  max-width:920px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:var(--card);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(15,24,48,.25);
+}
+.login-visual{
+  background:linear-gradient(160deg,var(--vx-navy-light),var(--vx-navy-dark) 70%);
+  color:#fff;
+  padding:48px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+  position:relative;
+  overflow:hidden;
+}
+.login-visual::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(116,188,31,.30), transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(116,188,31,.18), transparent 45%);
+}
+.login-visual .logo-badge{
+  position:relative;z-index:1;
+  background:transparent;
+  border-radius:16px;
+  padding:20px 26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:vxLogoFadeIn .7s ease-out both;
+}
+.login-visual .logo-badge img{
+  display:block;
+  width:200px;
+  height:auto;
+  max-width:260px;
+  object-fit:contain;
+  background:transparent;
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.25));
+}
+@keyframes vxLogoFadeIn{
+  from{opacity:0;transform:translateY(-8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.login-visual .brand{
+  position:relative;z-index:1;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:2.5px;
+  color:#fff;
+  text-transform:uppercase;
+}
+.login-visual .tagline{
+  position:relative;z-index:1;
+  color:#c7d0e8;
+  font-size:13px;
+  text-align:center;
+  max-width:220px;
+  line-height:1.5;
+}
+.login-form{
+  padding:52px 44px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.login-form .form-logo{
+  height:25px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  background:transparent;
+  display:block;
+  align-self:center;
+  margin:0 0 18px;
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.12));
+  animation:vxLogoFadeIn .7s ease-out both;
+}
+.login-form h1{font-size:26px;margin:0 0 4px;font-weight:800;}
+.login-form .sub{color:var(--text-dim);font-size:14px;margin:0 0 28px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--text);}
+.field .input-wrap{position:relative;}
+.field input,.field select{
+  width:100%;
+  padding:11px 14px;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  font-size:14px;
+  outline:none;
+  transition:border-color .15s;
+  background:#fbfcfe;
+}
+.field input:focus,.field select:focus{border-color:var(--blue-500);background:#fff;}
+#login-screen .field input:focus,#login-screen .field select:focus{border-color:var(--vx-green);background:#fff;}
+.field .eye{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--text-faint);font-size:16px;background:none;border:none;padding:4px;}
+.row-between{display:flex;align-items:center;justify-content:space-between;font-size:13px;margin:6px 0 22px;color:var(--text-dim);}
+.row-between label{display:flex;align-items:center;gap:6px;cursor:pointer;}
+.btn-primary{
+  width:100%;
+  background:var(--vx-navy);
+  color:#fff;
+  border:none;
+  padding:12px 16px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.2px;
+  transition:background .15s, transform .1s;
+}
+.btn-primary:hover{background:var(--vx-navy-dark);}
+.btn-primary:active{transform:scale(.99);}
+.role-picker{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap;}
+.role-chip{
+  flex:1;
+  min-width:120px;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:9px 10px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--text-dim);
+  background:#fbfcfe;
+  text-align:center;
+  transition:all .15s;
+}
+.role-chip.active{border-color:var(--vx-green);background:#eef7e2;color:var(--vx-green-dark);}
+#login-screen .row-between a{color:var(--vx-navy);font-weight:700;}
+#login-screen input[type="checkbox"]{accent-color:var(--vx-green);}
+
+/* ---------- APP SHELL ---------- */
+#app{display:none;min-height:100vh;grid-template-columns:236px 1fr;}
+#app.visible{display:grid;}
+.sidebar{
+  background:var(--navy-950);
+  color:#c7cee3;
+  display:flex;
+  flex-direction:column;
+  position:sticky;top:0;height:100vh;
+  overflow-y:auto;
+}
+.sidebar .role-badge{
+  margin:18px 16px 6px;
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.8px;
+  color:#7d89ab;
+  padding:6px 10px;
+  border:1px solid #26335a;
+  border-radius:7px;
+  text-align:center;
+}
+.sidebar nav{padding:8px 10px;flex:1;}
+.side-link{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;
+  border-radius:9px;
+  font-size:13.5px;
+  font-weight:500;
+  color:#aab4d1;
+  margin-bottom:2px;
+  transition:background .15s,color .15s;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.side-link:hover{background:#1a2748;color:#fff;}
+.side-link.active{background:var(--blue-600);color:#fff;}
+.side-link .ic{width:16px;text-align:center;font-size:14px;flex-shrink:0;}
+.sidebar .logout{margin:8px 10px 16px;padding:0 10px;}
+
+.main{display:flex;flex-direction:column;min-width:0;}
+.topbar{
+  height:60px;
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 22px;
+  position:sticky;top:0;z-index:5;
+}
+.topbar .left{display:flex;align-items:center;gap:14px;}
+.topbar h2{font-size:16px;font-weight:700;margin:0;}
+.topbar .right{display:flex;align-items:center;gap:16px;}
+.icon-btn{
+  width:34px;height:34px;border-radius:9px;border:1px solid var(--border);
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  color:var(--text-dim);font-size:14px;position:relative;
+}
+.icon-btn .dot{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--red);border:1.5px solid #fff;}
+.admin-chip{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;}
+
+.topbar-menu{position:relative;}
+.search-panel,.notif-panel{
+  position:absolute;top:44px;right:0;background:#fff;border:1px solid var(--border);border-radius:12px;
+  box-shadow:0 12px 30px rgba(20,30,60,.16);z-index:30;display:none;
+}
+.search-panel.show,.notif-panel.show{display:block;}
+.search-panel{width:340px;padding:12px;}
+.search-panel input{
+  width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:9px;font-size:13px;background:#fbfcfe;box-sizing:border-box;
+}
+.search-panel input:focus{outline:none;border-color:var(--blue-500);background:#fff;}
+.search-results{max-height:360px;overflow-y:auto;margin-top:8px;}
+.search-group{margin-bottom:6px;}
+.search-group-label{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--text-faint);font-weight:700;padding:6px 8px 4px;}
+.search-item{padding:9px 10px;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.search-item:hover{background:#f5f7fb;}
+.search-item .ttl{font-size:13px;font-weight:600;color:var(--text);}
+.search-item .sub{font-size:11.5px;color:var(--text-dim);}
+.search-empty{padding:26px 10px;text-align:center;color:var(--text-faint);font-size:12.5px;}
+
+.notif-panel{width:320px;}
+.notif-head{padding:13px 16px;border-bottom:1px solid var(--border);font-weight:700;font-size:13.5px;}
+.notif-list{max-height:360px;overflow-y:auto;}
+.notif-item{padding:11px 14px;border-bottom:1px solid #f0f2f8;cursor:pointer;display:flex;gap:10px;align-items:flex-start;}
+.notif-item:last-child{border-bottom:none;}
+.notif-item:hover{background:#fafbfe;}
+.notif-ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.notif-ic.red{background:var(--red-bg);color:var(--red);}
+.notif-ic.amber{background:var(--amber-bg);color:var(--amber);}
+.notif-ic.green{background:var(--green-bg);color:var(--green);}
+.notif-ic.blue{background:var(--blue-100);color:var(--blue-600);}
+.notif-txt .t{font-size:13px;font-weight:600;color:var(--text);}
+.notif-txt .d{font-size:11.5px;color:var(--text-dim);margin-top:1px;}
+.notif-empty{padding:30px 14px;text-align:center;color:var(--text-faint);font-size:12.5px;}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--blue-100);color:var(--blue-600);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;}
+
+.content{padding:24px 28px 60px;flex:1;}
+.page-title{font-size:20px;font-weight:800;margin:0 0 20px;}
+.page-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;}
+
+/* KPI cards */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px;}
+.kpi{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:18px 18px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);
+}
+.kpi .ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.kpi .lbl{font-size:12px;color:var(--text-dim);font-weight:600;margin-bottom:3px;}
+.kpi .val{font-size:22px;font-weight:800;}
+.kpi.blue .ic{background:var(--blue-100);color:var(--blue-600);}
+.kpi.green .ic{background:var(--green-bg);color:var(--green);}
+.kpi.amber .ic{background:var(--amber-bg);color:var(--amber);}
+.kpi.purple .ic{background:var(--purple-bg);color:var(--purple);}
+.kpi.red .ic{background:var(--red-bg);color:var(--red);}
+
+.grid-2{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);}
+.card-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--border);}
+.card-head h3{margin:0;font-size:14.5px;font-weight:700;}
+.card-body{padding:16px 18px;}
+.link-sm{font-size:12.5px;color:var(--blue-600);font-weight:600;}
+
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead th{
+  text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;
+  color:var(--text-faint);font-weight:700;padding:9px 12px;border-bottom:1px solid var(--border);
+}
+tbody td{padding:12px;border-bottom:1px solid #f0f2f8;color:var(--text);}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#fafbfe;}
+.mono{font-family:'Roboto Mono',monospace;font-size:12px;color:var(--text-dim);}
+
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap;}
+.badge.green{background:var(--green-bg);color:var(--green);}
+.badge.amber{background:var(--amber-bg);color:var(--amber);}
+.badge.red{background:var(--red-bg);color:var(--red);}
+.badge.teal{background:var(--teal-bg);color:var(--teal);}
+.badge.grey{background:#eef0f6;color:var(--text-dim);}
+.move-in{color:var(--green);font-weight:700;}
+.move-out{color:var(--red);font-weight:700;}
+
+.act-icons{display:flex;gap:6px;}
+.act-icons button{
+  width:28px;height:28px;border-radius:7px;border:1px solid var(--border);background:#fff;
+  color:var(--text-dim);font-size:12px;display:flex;align-items:center;justify-content:center;
+}
+.act-icons button:hover{background:#f5f7fb;}
+.act-icons button.danger:hover{color:var(--red);border-color:#fbc6c6;background:var(--red-bg);}
+.act-icons button.view:hover{color:var(--blue-600);border-color:#bcd3fb;background:var(--blue-100);}
+
+.btn{
+  padding:9px 16px;border-radius:9px;font-size:13px;font-weight:700;border:1.5px solid transparent;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.btn-blue{background:var(--blue-600);color:#fff;}
+.btn-blue:hover{background:#2559c9;}
+.btn-ghost{background:#fff;border-color:var(--border);color:var(--text);}
+.btn-ghost:hover{background:#f5f7fb;}
+
+.search-box{position:relative;}
+.search-box input{
+  padding:9px 12px 9px 34px;border:1.5px solid var(--border);border-radius:9px;font-size:13px;width:230px;background:#fbfcfe;
+}
+.search-box input:focus{outline:none;border-color:var(--blue-500);background:#fff;}
+.search-box .sic{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text-faint);font-size:13px;}
+
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:16px;}
+.tab{padding:10px 16px;font-size:13px;font-weight:600;color:var(--text-dim);border-bottom:2px solid transparent;cursor:pointer;}
+.tab.active{color:var(--blue-600);border-color:var(--blue-600);}
+.tab .count{margin-left:6px;font-size:11px;background:#eef0f6;color:var(--text-dim);padding:1px 6px;border-radius:10px;}
+.tab.active .count{background:var(--blue-100);color:var(--blue-600);}
+
+.donut-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;padding:6px 4px 4px;}
+.donut{width:150px;height:150px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;}
+.legend{width:100%;display:flex;flex-direction:column;gap:8px;font-size:12.5px;}
+.legend .item{display:flex;align-items:center;justify-content:space-between;}
+.legend .item .k{display:flex;align-items:center;gap:8px;color:var(--text-dim);}
+.legend .dot{width:9px;height:9px;border-radius:50%;}
+
+.stat-strip{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+.pill{background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px 16px;font-size:12.5px;color:var(--text-dim);font-weight:600;}
+.pill b{color:var(--text);font-size:14px;margin-right:5px;}
+
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px;}
+.form-grid .field{margin-bottom:0;}
+
+.empty{padding:40px 20px;text-align:center;color:var(--text-faint);font-size:13px;}
+.pagination{display:flex;align-items:center;justify-content:space-between;padding:14px 4px 2px;font-size:12.5px;color:var(--text-dim);}
+.pagenums{display:flex;gap:4px;}
+.pagenums span,.pagenums button{
+  width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12.5px;border:1px solid transparent;background:none;color:var(--text-dim);
+}
+.pagenums .cur{background:var(--blue-600);color:#fff;font-weight:700;}
+
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
+.detail-box{background:#fbfcfe;border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+.detail-box .lbl{font-size:11px;color:var(--text-faint);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:5px;}
+.detail-box .val{font-size:14.5px;font-weight:700;}
+
+.toast{
+  position:fixed;bottom:24px;right:24px;background:var(--navy-950);color:#fff;padding:13px 20px;border-radius:10px;
+  font-size:13px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px;
+  transform:translateY(20px);opacity:0;transition:all .25s;z-index:999;
+}
+.toast.show{transform:translateY(0);opacity:1;}
+
+/* ---- notif-toast : petit rectangle qui apparaît quand une notification arrive ---- */
+.notif-toast-wrap{
+  position:fixed;top:74px;right:24px;z-index:997;
+  display:flex;flex-direction:column;gap:10px;width:320px;max-width:calc(100vw - 32px);
+  pointer-events:none;
+}
+.notif-toast{
+  position:relative;overflow:hidden;pointer-events:auto;cursor:pointer;
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  box-shadow:0 14px 34px -8px rgba(20,30,60,.24);
+  padding:12px 28px 12px 14px;display:flex;gap:10px;align-items:flex-start;
+  transform:translateX(24px);opacity:0;transition:transform .28s ease,opacity .28s ease;
+}
+.notif-toast.show{transform:translateX(0);opacity:1;}
+.notif-toast.hide{transform:translateX(24px);opacity:0;}
+.notif-toast:hover{box-shadow:0 18px 40px -6px rgba(20,30,60,.3);}
+.notif-toast .ntxt{min-width:0;}
+.notif-toast .ntxt .t{font-size:13px;font-weight:700;color:var(--text);}
+.notif-toast .ntxt .d{font-size:11.5px;color:var(--text-dim);margin-top:2px;}
+.notif-toast .nclose{
+  position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;color:var(--text-faint);font-size:11px;
+}
+.notif-toast .nclose:hover{background:#f0f2f8;color:var(--text-dim);}
+.notif-toast .nprog{position:absolute;left:0;bottom:0;height:2px;background:var(--blue-500);width:100%;}
+
+.crumb{font-size:12.5px;color:var(--text-faint);margin-bottom:6px;}
+.crumb a{color:var(--blue-600);font-weight:600;}
+
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(15,24,48,.45);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;
+}
+.modal-overlay.show{display:flex;}
+.modal-box{
+  background:#fff;border-radius:14px;width:100%;max-width:460px;max-height:88vh;overflow-y:auto;
+  box-shadow:0 30px 60px -20px rgba(15,24,48,.35);
+}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);}
+.modal-head h3{margin:0;font-size:15px;font-weight:800;}
+.modal-close{width:28px;height:28px;border-radius:8px;border:none;background:#f5f7fb;color:var(--text-dim);font-size:14px;}
+.modal-body{padding:18px 20px;}
+.modal-foot{display:flex;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid var(--border);}
+.modal-body .field{margin-bottom:14px;}
+.detail-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f2f8;font-size:13px;}
+.detail-line:last-child{border-bottom:none;}
+.detail-line .k{color:var(--text-dim);}
+.detail-line .v{font-weight:700;}
+
+@media(max-width:1100px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr);}
+  .grid-2{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr 1fr;}
+  .detail-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== LOGIN ===================== -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-visual">
+      <div class="logo-badge"><img src="data:image/png;base64,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" alt="Vectorys"></div>
+      <div class="brand">Vectorys</div>
+      <div class="tagline">Système intelligent de gestion des ressources de Vectorys.</div>
+    </div>
+    <div class="login-form">
+      <img class="form-logo" src="data:image/png;base64,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" alt="Vectorys">
+      <h1>Connexion</h1>
+      <p class="sub">Gestion du stock des consommables</p>
+      <div class="field">
+        <label>Nom d'utilisateur</label>
+        <input id="login-user" type="text" placeholder="Entrez votre nom d'utilisateur" value="">
+      </div>
+      <div class="field">
+        <label>Mot de passe</label>
+        <div class="input-wrap">
+          <input id="login-pass" type="password" placeholder="Entrez votre mot de passe" value="">
+          <button class="eye" type="button" onclick="togglePass()">👁</button>
+        </div>
+      </div>
+      <div id="login-error" style="display:none;background:var(--red-bg);color:var(--red);font-size:12.5px;font-weight:600;padding:9px 12px;border-radius:8px;margin-bottom:14px;"></div>
+      <div class="row-between">
+        <label><input type="checkbox" checked> Se souvenir de moi</label>
+        <a href="#" id="forgot-pass-link" onclick="doForgotPassword(event)">Mot de passe oublié ?</a>
+      </div>
+      <div class="role-picker" id="role-picker" style="display:none">
+        <div class="role-chip active" data-role="admin">Administrateur</div>
+        <div class="role-chip" data-role="achats">Resp. Achats</div>
+        <div class="role-chip" data-role="service">Resp. de service</div>
+      </div>
+      <button class="btn-primary" id="login-submit-btn" onclick="doLogin()">Se connecter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== APP ===================== -->
+<div id="app">
+  <aside class="sidebar">
+    <div class="role-badge" id="role-badge">ADMINISTRATEUR</div>
+    <nav id="side-nav"></nav>
+    <div class="logout">
+      <div class="side-link" onclick="doLogout()"><span class="ic">↩</span> Déconnexion</div>
+    </div>
+  </aside>
+  <div class="main">
+    <div class="topbar">
+      <div class="left">
+        <h2 id="topbar-title">Tableau de bord</h2>
+      </div>
+      <div class="right">
+        <div class="topbar-menu">
+          <div class="icon-btn" onclick="toggleSearchPanel(event)">🔍</div>
+          <div class="search-panel" id="search-panel" onclick="event.stopPropagation()">
+            <input id="global-search-input" placeholder="Rechercher un article, une demande..." oninput="runGlobalSearch(this.value)">
+            <div id="global-search-results" class="search-results"></div>
+          </div>
+        </div>
+        <div class="topbar-menu">
+          <div class="icon-btn" onclick="toggleNotifPanel(event)">🔔<span class="dot" id="notif-dot" style="display:none"></span></div>
+          <div class="notif-panel" id="notif-panel" onclick="event.stopPropagation()">
+            <div class="notif-head" id="notif-head">Notifications</div>
+            <div id="notif-list" class="notif-list"></div>
+          </div>
+        </div>
+        <div class="admin-chip">
+          <div class="avatar" id="user-avatar">AB</div>
+          <span id="user-name">Admin</span>
+        </div>
+      </div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="notif-toast-wrap" id="notif-toast-wrap"></div>
+
+<div class="modal-overlay" id="modal-overlay" onmousedown="if(event.target===this)closeModal()">
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<script>
+/* ========================= MOCK DATA ========================= */
+const state = {
+  role: 'admin',
+  userName: 'Ahmed Ben Ali',
+  route: 'dashboard',
+  demandeTab: 'attente',
+  commandeTab: 'attente',
+  mesDemandesTab: 'toutes',
+  routeParam: null,
+  demandeSearch: '',
+  commandeSearch: '',
+  historyFilter: 'toutes',
+};
+
+const SIMPLE_LISTS = {
+  roles: ['Administrateur','Responsable Achats','Responsable Service'],
+};
+const SIMPLE_META = {
+  roles: {title:'Rôles', ic:'🛡', db:false, readonly:true},
+  services: {title:'Services', ic:'🏢', db:true, api:'services', reload: ()=>loadServices(), getList:()=>services},
+  categories: {title:'Catégories', ic:'🏷', db:true, api:'categories', reload: ()=>loadCategories(), getList:()=>categories},
+};
+const ROLE_DESCRIPTIONS = {
+  'Administrateur': "Accès complet à l'application : utilisateurs, rôles, services, catégories, articles, fournisseurs, demandes, commandes, alertes et historique.",
+  'Responsable Achats': "Gère les articles, fournisseurs, demandes, commandes et les alertes de stock.",
+  'Responsable Service': "Consulte les articles disponibles, et crée / suit ses propres demandes.",
+};
+
+let users = []; // chargé depuis la base de données via l'API (voir loadUsers)
+
+let articles = []; // chargé depuis la base de données via l'API (voir loadArticles)
+
+let fournisseurs = []; // chargé depuis la base de données via l'API (voir loadFournisseurs), objets {id, nom}
+
+let categories = []; // chargé depuis la base de données via l'API (voir loadCategories), objets {id, nom}
+
+let services = []; // chargé depuis la base de données via l'API (voir loadServices), objets {id, nom}
+
+let demandes = []; // chargé depuis la base de données via l'API (voir loadDemandes)
+
+let commandes = [];
+
+let historique = []; // chargé depuis la base de données via l'API (voir loadHistorique)
+// Signe/couleur d'un mouvement : basé sur le type ('sortie' => -, rouge | 'entree' => +, vert).
+// (qte est toujours stockée positive en base, le sens est porté par le type, pas par le signe de qte)
+function moveSign(h){ return h.type==='sortie' ? '-' : '+'; }
+function moveClass(h){ return h.type==='sortie' ? 'move-out' : 'move-in'; }
+
+// Notif-toast (petit rectangle de notification) : réglages + suivi des notifications déjà vues
+const NOTIF_POLL_INTERVAL = 20000; // vérifie les nouvelles notifications toutes les 20s
+const NOTIF_TOAST_DURATION = 6000; // durée d'affichage du rectangle (ms)
+let seenNotifKeys = new Set();
+let notifDotSeen = new Set(); // clés des notifs déjà "vues" (panneau ouvert) : le point rouge se cache pour celles-ci
+let notifPollTimer = null;
+
+/* ========================= NAV CONFIG ========================= */
+const NAV = {
+  admin: [
+    {id:'dashboard', label:'Tableau de bord', ic:'▦'},
+    {id:'fournisseurs', label:'Fournisseurs', ic:'🚚'},
+    {id:'users', label:'Utilisateurs', ic:'👤'},
+    {id:'services', label:'Services', ic:'🏢'},
+    {id:'categories', label:'Catégories', ic:'🏷'},
+    {id:'articles', label:'Articles', ic:'📦'},
+    {id:'demandes', label:'Demandes', ic:'📄'},
+    {id:'history', label:'Historique', ic:'🕒'},
+    {id:'roles', label:'Rôles', ic:'🛡'},
+    {id:'commandes', label:'Commandes', ic:'🛒'},
+    {id:'alerts', label:'Alertes', ic:'⚠'},
+  ],
+  achats: [
+    {id:'dashboard', label:'Tableau de bord', ic:'▦'},
+    {id:'fournisseurs', label:'Fournisseurs', ic:'🚚'},
+    {id:'articles', label:'Articles', ic:'📦'},
+    {id:'demandes', label:'Demandes', ic:'📄'},
+    {id:'create-demande', label:'Créer une demande', ic:'➕'},
+    {id:'history', label:'Historique', ic:'🕒'},
+    {id:'commandes', label:'Commandes', ic:'🛒'},
+    {id:'alerts', label:'Alertes', ic:'⚠'},
+  ],
+  service: [
+    {id:'dashboard', label:'Tableau de bord', ic:'▦'},
+    {id:'available', label:'Articles disponibles', ic:'📦'},
+    {id:'my-demandes', label:'Mes demandes', ic:'📄'},
+    {id:'history', label:'Historique', ic:'🕒'},
+    {id:'create-demande', label:'Créer une demande', ic:'➕'},
+  ],
+};
+const ROLE_LABEL = {admin:'ADMINISTRATEUR', achats:'RESP. ACHATS', service:'RESP. SERVICE'};
+const PAGE_TITLE = {
+  dashboard:'Tableau de bord', users:'Utilisateurs', roles:'Rôles', services:'Services',
+  categories:'Catégories', articles:'Articles', demandes:'Demandes', commandes:'Commandes',
+  fournisseurs:'Fournisseurs', alerts:'Alertes de stock', history:'Historique des mouvements',
+  available:'Articles disponibles', 'my-demandes':'Mes demandes',
+  'create-demande':'Créer une demande', 'commande-detail': "Détails d'une commande",
+};
+
+/* ========================= LOGIN ========================= */
+// L'authentification et les comptes utilisateurs sont désormais gérés par la base
+// de données MySQL via l'API PHP (dossier /api). Voir api/login.php, api/users_*.php.
+const API = 'api/';
+async function apiCall(endpoint, body){
+  const res = await fetch(API + endpoint, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    credentials: 'same-origin',
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  return res.json();
+}
+async function apiGet(endpoint){
+  const res = await fetch(API + endpoint, {credentials:'same-origin'});
+  return res.json();
+}
+
+async function loadArticles(){
+  try{
+    const data = await apiGet('articles_list.php');
+    if(data.success){ articles = data.articles; }
+    else { toast(data.message || 'Erreur lors du chargement des articles'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadFournisseurs(){
+  try{
+    const data = await apiGet('fournisseurs_list.php');
+    if(data.success){ fournisseurs = data.fournisseurs; }
+    else { toast(data.message || 'Erreur lors du chargement des fournisseurs'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadCategories(){
+  try{
+    const data = await apiGet('categories_list.php');
+    if(data.success){ categories = data.categories; }
+    else { toast(data.message || 'Erreur lors du chargement des catégories'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadServices(){
+  try{
+    const data = await apiGet('services_list.php');
+    if(data.success){ services = data.services; }
+    else { toast(data.message || 'Erreur lors du chargement des services'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadDemandes(){
+  try{
+    const data = await apiGet('demandes_list.php');
+    if(data.success){ demandes = data.demandes; }
+    else { toast(data.message || 'Erreur lors du chargement des demandes'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadCommandes(){
+  try{
+    const data = await apiGet('commandes_list.php');
+    if(data.success){
+      commandes = data.commandes.map(cm=>({
+        ...cm,
+        montant: +cm.montant,
+        items:[{art:cm.article_nom, qte:cm.qte, pu:+cm.prix_unitaire}],
+      }));
+    } else { toast(data.message || 'Erreur lors du chargement des commandes'); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+async function loadHistorique(){
+  try{
+    const data = await apiGet('historique_list.php');
+    if(data.success){ historique = data.historique; }
+    else { toast(data.message || "Erreur lors du chargement de l'historique"); }
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); }
+}
+
+document.getElementById('role-picker').addEventListener('click', e=>{
+  const chip = e.target.closest('.role-chip');
+  if(!chip) return;
+  document.querySelectorAll('.role-chip').forEach(c=>c.classList.remove('active'));
+  chip.classList.add('active');
+});
+
+function togglePass(){
+  const p = document.getElementById('login-pass');
+  p.type = p.type === 'password' ? 'text' : 'password';
+}
+
+function showLoginError(msg){
+  const box = document.getElementById('login-error');
+  box.textContent = msg;
+  box.style.display = 'block';
+}
+function clearLoginError(){
+  document.getElementById('login-error').style.display = 'none';
+}
+
+async function doLogin(){
+  clearLoginError();
+  const rawUser = document.getElementById('login-user').value.trim();
+  const rawPass = document.getElementById('login-pass').value;
+
+  if(!rawUser || !rawPass){
+    showLoginError('Veuillez saisir un nom d\'utilisateur et un mot de passe.');
+    return;
+  }
+
+  const btn = document.getElementById('login-submit-btn');
+  if(btn){ btn.disabled = true; btn.textContent = 'Connexion...'; }
+
+  let data;
+  try{
+    data = await apiCall('login.php', {username: rawUser, password: rawPass});
+  }catch(e){
+    showLoginError("Impossible de contacter le serveur. Vérifiez qu'Apache et MySQL sont démarrés dans XAMPP.");
+    if(btn){ btn.disabled = false; btn.textContent = 'Se connecter'; }
+    return;
+  }
+
+  if(btn){ btn.disabled = false; btn.textContent = 'Se connecter'; }
+
+  if(!data.success){
+    showLoginError(data.message || 'Nom d\'utilisateur ou mot de passe incorrect.');
+    return;
+  }
+
+  applySession(data.user);
+}
+
+async function doForgotPassword(e){
+  if(e) e.preventDefault();
+  clearLoginError();
+
+  const rawUser = document.getElementById('login-user').value.trim();
+  if(!rawUser){
+    showLoginError('Saisissez d\'abord votre nom d\'utilisateur, puis cliquez sur "Mot de passe oublié ?".');
+    return;
+  }
+
+  const link = document.getElementById('forgot-pass-link');
+  const originalText = link ? link.textContent : '';
+  if(link){ link.textContent = 'Envoi en cours...'; link.style.pointerEvents = 'none'; link.style.opacity = '0.6'; }
+
+  let data;
+  try{
+    data = await apiCall('forgot_password.php', {username: rawUser});
+  }catch(err){
+    showLoginError("Impossible de contacter le serveur. Vérifiez qu'Apache et MySQL sont démarrés dans XAMPP.");
+    if(link){ link.textContent = originalText; link.style.pointerEvents = ''; link.style.opacity = ''; }
+    return;
+  }
+
+  if(link){ link.textContent = originalText; link.style.pointerEvents = ''; link.style.opacity = ''; }
+
+  if(data.success){
+    toast(data.message || 'Un email a été envoyé.');
+  } else {
+    showLoginError(data.message || 'Une erreur est survenue.');
+  }
+}
+
+function applySession(user){
+  state.role = user.role;
+  state.userName = user.nom;
+  state.userService = user.service || '';
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').classList.add('visible');
+  document.getElementById('role-badge').textContent = ROLE_LABEL[state.role];
+  document.getElementById('user-name').textContent = state.userName.split(' ')[0];
+  document.getElementById('user-avatar').textContent = state.userName.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase();
+  state.route = 'dashboard';
+  buildSidebar();
+  render();
+  loadFournisseurs(); // pour les listes déroulantes (entrées de stock, commandes...)
+  loadCategories();
+  loadServices();
+  loadCommandes();
+  seenNotifKeys = new Set();
+  notifDotSeen = new Set();
+  refreshNotifications();
+  startNotifPolling();
+}
+
+document.getElementById('login-pass').addEventListener('keydown', e=>{
+  if(e.key === 'Enter') doLogin();
+});
+
+async function doLogout(){
+  try{ await apiCall('logout.php'); }catch(e){ /* ignore network error on logout */ }
+  stopNotifPolling();
+  clearAllNotifToasts();
+  seenNotifKeys = new Set();
+  notifDotSeen = new Set();
+  document.getElementById('app').classList.remove('visible');
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('login-pass').value = '';
+  clearLoginError();
+}
+
+// Si une session PHP est déjà active (page rafraîchie), on reconnecte automatiquement
+(async function checkExistingSession(){
+  try{
+    const data = await apiGet('session.php');
+    if(data.success){ applySession(data.user); }
+  }catch(e){ /* pas de connexion serveur pour l'instant, on reste sur l'écran de connexion */ }
+})();
+
+/* ========================= SIDEBAR ========================= */
+function buildSidebar(){
+  const nav = document.getElementById('side-nav');
+  nav.innerHTML = '';
+  NAV[state.role].forEach(item=>{
+    const el = document.createElement('div');
+    el.className = 'side-link' + (state.route===item.id ? ' active' : '');
+    el.innerHTML = `<span class="ic">${item.ic}</span> ${item.label}`;
+    el.onclick = ()=>{ state.route = item.id; state.routeParam=null; render(); };
+    nav.appendChild(el);
+  });
+}
+
+/* ========================= HELPERS ========================= */
+function fmt(n){ return n.toLocaleString('fr-FR', {minimumFractionDigits:3, maximumFractionDigits:3}); }
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* ---- generic modal ---- */
+function openModal(title, bodyHtml, footHtml){
+  document.getElementById('modal-box').innerHTML = `
+    <div class="modal-head"><h3>${title}</h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <div class="modal-body">${bodyHtml}</div>
+    ${footHtml ? `<div class="modal-foot">${footHtml}</div>` : ''}
+  `;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+/* ---- topbar: recherche globale + notifications ---- */
+function escapeHtml(s){
+  return (s==null?'':s.toString()).replace(/[&<>"']/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+function closeTopbarPanels(){
+  const sp = document.getElementById('search-panel');
+  const np = document.getElementById('notif-panel');
+  if(sp) sp.classList.remove('show');
+  if(np) np.classList.remove('show');
+}
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.topbar-menu')) closeTopbarPanels();
+});
+
+async function toggleSearchPanel(e){
+  e.stopPropagation();
+  const panel = document.getElementById('search-panel');
+  const notif = document.getElementById('notif-panel');
+  notif.classList.remove('show');
+  const willShow = !panel.classList.contains('show');
+  panel.classList.toggle('show');
+  if(willShow){
+    const input = document.getElementById('global-search-input');
+    input.value = '';
+    document.getElementById('global-search-results').innerHTML = '<div class="search-empty">Tapez pour rechercher…</div>';
+    setTimeout(()=>input.focus(), 30);
+    const jobs = [loadArticles(), loadDemandes()];
+    if(state.role!=='service') jobs.push(loadFournisseurs());
+    if(state.role==='admin') jobs.push(loadUsers());
+    await Promise.all(jobs);
+  }
+}
+function runGlobalSearch(q){
+  const box = document.getElementById('global-search-results');
+  q = (q||'').trim();
+  if(!q){ box.innerHTML = '<div class="search-empty">Tapez pour rechercher…</div>'; return; }
+
+  const groups = [];
+  const artMatches = articles.filter(a=>fuzzyMatch(a.nom,q)||fuzzyMatch(a.code,q)||fuzzyMatch(a.cat,q)).slice(0,6);
+  if(artMatches.length) groups.push({label:'Articles', items: artMatches.map(a=>({
+    title:a.nom, sub:`${a.code} · ${a.cat} · stock ${a.stock}`,
+    action:()=>{ state.route = state.role==='service' ? 'available' : 'articles'; render(); }
+  }))});
+
+  const demMatches = demandes.filter(d=>fuzzyMatch(d.num,q)||fuzzyMatch(d.service,q)||fuzzyMatch(d.demandeur,q)).slice(0,6);
+  if(demMatches.length) groups.push({label:'Demandes', items: demMatches.map(d=>({
+    title:d.num, sub:`${d.service} · ${d.demandeur}`,
+    action:()=>{
+      if(state.role==='service'){ state.route='my-demandes'; render(); }
+      else{ state.route='demandes'; state.demandeTab=d.statut; state.demandeSearch=''; render(); setTimeout(()=>openDemandeDetail(d.num),60); }
+    }
+  }))});
+
+  if(state.role!=='service'){
+    const fournMatches = fournisseurs.filter(f=>fuzzyMatch(f.nom,q)).slice(0,6);
+    if(fournMatches.length) groups.push({label:'Fournisseurs', items: fournMatches.map(f=>({
+      title:f.nom, sub:'Fournisseur',
+      action:()=>{ state.route='fournisseurs'; render(); }
+    }))});
+  }
+  if(state.role==='admin'){
+    const userMatches = users.filter(u=>fuzzyMatch(u.nom,q)||fuzzyMatch(u.email,q)||fuzzyMatch(u.role,q)||fuzzyMatch(u.service,q)).slice(0,6);
+    if(userMatches.length) groups.push({label:'Utilisateurs', items: userMatches.map(u=>({
+      title:u.nom, sub:`${u.role} · ${u.service}`,
+      action:()=>{ state.route='users'; render(); }
+    }))});
+  }
+
+  if(!groups.length){ box.innerHTML = `<div class="search-empty">Aucun résultat pour « ${escapeHtml(q)} »</div>`; return; }
+
+  window.__searchActions = [];
+  box.innerHTML = groups.map(g=>`
+    <div class="search-group">
+      <div class="search-group-label">${g.label}</div>
+      ${g.items.map(it=>{
+        const idx = window.__searchActions.push(it.action)-1;
+        return `<div class="search-item" onclick="runSearchAction(${idx})">
+          <div><div class="ttl">${escapeHtml(it.title)}</div><div class="sub">${escapeHtml(it.sub)}</div></div>
+          <span>›</span>
+        </div>`;
+      }).join('')}
+    </div>`).join('');
+}
+function runSearchAction(idx){
+  const fn = window.__searchActions && window.__searchActions[idx];
+  closeTopbarPanels();
+  if(fn) fn();
+}
+
+async function toggleNotifPanel(e){
+  e.stopPropagation();
+  const panel = document.getElementById('notif-panel');
+  const search = document.getElementById('search-panel');
+  search.classList.remove('show');
+  const willShow = !panel.classList.contains('show');
+  panel.classList.toggle('show');
+  if(willShow){
+    const items = await refreshNotifications();
+    // L'utilisateur vient de voir ces notifications : on les marque comme "vues"
+    // pour que le point rouge disparaisse (il ne réapparaîtra que pour du nouveau).
+    notifDotSeen = new Set(items.map(it=>it.key));
+    updateNotifDot(items);
+  }
+}
+/* Construit la liste des notifications courantes (sans toucher au DOM).
+   Chaque item a une "key" stable qui sert à détecter les notifications
+   nouvelles (pour déclencher le petit rectangle / toast). */
+async function computeNotifItems(){
+  await Promise.all([loadArticles(), loadDemandes()]);
+  const items = [];
+  if(state.role==='achats'){
+    articles.filter(a=>a.stock<=0).forEach(a=>items.push({
+      key:`rupture-${a.id}`, ic:'📉', cls:'red', title:`${a.nom} — rupture de stock`,
+      sub:`Stock actuel : 0 · Emplacement ${a.emp || '—'}`,
+      action:()=>{ state.route='alerts'; render(); }
+    }));
+    articles.filter(a=>a.stock>0 && a.stock<=a.min).forEach(a=>items.push({
+      key:`bas-${a.id}`, ic:'⚠', cls:'amber', title:`${a.nom} — stock bas`,
+      sub:`Stock actuel : ${a.stock} (min ${a.min}) · Emplacement ${a.emp || '—'}`,
+      action:()=>{ state.route='alerts'; render(); }
+    }));
+  }
+  if(state.role!=='service'){
+    // Une demande reste "attente" quand le stock disponible ne suffit pas à la couvrir
+    // entièrement et/ou qu'elle contient un article hors de l'accès du compte demandeur
+    // (sinon elle est auto-validée, cf demandes_add.php) : une validation manuelle du
+    // responsable achats est alors nécessaire dès que le stock est réapprovisionné.
+    const attente = demandes.filter(d=>d.statut==='attente');
+    if(attente.length){
+      if(state.role==='achats'){
+        items.push({
+          key:`attente-${attente.map(d=>d.num).sort().join('_')}`,
+          ic:'⚠', cls:'amber',
+          title:`${attente.length} demande${attente.length>1?'s':''} en attente de décision`,
+          sub: attente.slice(0,3).map(d=>d.num).join(', '),
+          action:()=>{ state.route='demandes'; state.demandeTab='attente'; render(); }
+        });
+      } else {
+        items.push({
+          key:`attente-${attente.map(d=>d.num).sort().join('_')}`,
+          ic:'📄', cls:'blue', title:`${attente.length} demande${attente.length>1?'s':''} en attente de validation`,
+          sub: attente.slice(0,3).map(d=>d.num).join(', '),
+          action:()=>{ state.route='demandes'; state.demandeTab='attente'; render(); }
+        });
+      }
+    }
+  } else {
+    demandes.filter(d=>d.demandeur===state.userName && +d.notif_lue===0 && d.statut==='validee')
+      .forEach(d=>items.push({
+        key:`validee-${d.num}`,
+        ic: '✅',
+        cls: 'green',
+        title: `Votre demande ${d.num} a été validée`,
+        sub: `${d.service} · ${d.date}`,
+        action:()=>{ state.route='my-demandes'; render(); ackDemandeNotif(d.num); }
+      }));
+  }
+  return items;
+}
+
+// Le point rouge ne reflète pas juste "il y a des notifications" mais "il y a des
+// notifications que l'utilisateur n'a pas encore vues" (pas encore ouvert le panneau
+// depuis leur apparition). Dès qu'il ouvre le panneau, elles passent dans notifDotSeen
+// et le point disparaît ; il ne revient que si une notification vraiment nouvelle arrive.
+function updateNotifDot(items){
+  const dot = document.getElementById('notif-dot');
+  if(!dot) return;
+  const hasUnseen = items.some(it=>!notifDotSeen.has(it.key));
+  dot.style.display = hasUnseen ? 'block' : 'none';
+}
+
+async function refreshNotifications(){
+  const items = await computeNotifItems();
+
+  // Toute notification dont la "key" n'était pas encore connue est nouvelle :
+  // on la fait apparaître dans le petit rectangle (notif-toast), quelques secondes,
+  // cliquable pour aller directement à l'endroit concerné (ex : Alertes de stock).
+  items.forEach(it=>{ if(!seenNotifKeys.has(it.key)) showNotifToast(it); });
+  seenNotifKeys = new Set(items.map(it=>it.key));
+
+  updateNotifDot(items);
+
+  const list = document.getElementById('notif-list');
+  const head = document.getElementById('notif-head');
+  if(!list || !head) return items;
+
+  head.textContent = items.length ? `Notifications (${items.length})` : 'Notifications';
+
+  if(!items.length){ list.innerHTML = '<div class="notif-empty">Aucune notification</div>'; return items; }
+
+  window.__notifActions = [];
+  list.innerHTML = items.map(it=>{
+    const idx = window.__notifActions.push(it.action)-1;
+    return `<div class="notif-item" onclick="runNotifAction(${idx})">
+      <div class="notif-ic ${it.cls}">${it.ic}</div>
+      <div class="notif-txt"><div class="t">${escapeHtml(it.title)}</div><div class="d">${escapeHtml(it.sub)}</div></div>
+    </div>`;
+  }).join('');
+  return items;
+}
+function runNotifAction(idx){
+  const fn = window.__notifActions && window.__notifActions[idx];
+  closeTopbarPanels();
+  if(fn) fn();
+}
+
+/* ---- notif-toast : le petit rectangle qui apparaît quelques secondes ---- */
+function startNotifPolling(){
+  stopNotifPolling();
+  notifPollTimer = setInterval(refreshNotifications, NOTIF_POLL_INTERVAL);
+}
+function stopNotifPolling(){
+  if(notifPollTimer){ clearInterval(notifPollTimer); notifPollTimer = null; }
+}
+
+function showNotifToast(item){
+  const wrap = document.getElementById('notif-toast-wrap');
+  if(!wrap) return;
+  const el = document.createElement('div');
+  el.className = 'notif-toast';
+  el.innerHTML = `
+    <div class="notif-ic ${item.cls}">${item.ic}</div>
+    <div class="ntxt"><div class="t">${escapeHtml(item.title)}</div><div class="d">${escapeHtml(item.sub)}</div></div>
+    <div class="nclose" title="Fermer">✕</div>
+    <div class="nprog"></div>
+  `;
+  wrap.prepend(el);
+  requestAnimationFrame(()=>el.classList.add('show'));
+
+  const prog = el.querySelector('.nprog');
+  let remaining = NOTIF_TOAST_DURATION;
+  let startedAt = Date.now();
+  let dismissTimer = null;
+
+  function playProgress(ms){
+    prog.style.transition = 'none';
+    void prog.offsetWidth; // force le navigateur à figer l'état courant avant l'animation
+    prog.style.transition = `width ${ms}ms linear`;
+    prog.style.width = '0%';
+  }
+  function play(){
+    startedAt = Date.now();
+    playProgress(remaining);
+    dismissTimer = setTimeout(()=>dismissNotifToast(el), remaining);
+  }
+  function pause(){
+    clearTimeout(dismissTimer);
+    remaining = Math.max(300, remaining - (Date.now() - startedAt));
+    const w = getComputedStyle(prog).width;
+    prog.style.transition = 'none';
+    prog.style.width = w;
+  }
+
+  el.addEventListener('mouseenter', pause);
+  el.addEventListener('mouseleave', play);
+  el.querySelector('.nclose').addEventListener('click', e=>{
+    e.stopPropagation();
+    clearTimeout(dismissTimer);
+    dismissNotifToast(el);
+  });
+  el.addEventListener('click', ()=>{
+    clearTimeout(dismissTimer);
+    dismissNotifToast(el);
+    closeTopbarPanels();
+    if(item.action) item.action();
+  });
+
+  prog.style.width = '100%';
+  play();
+}
+function dismissNotifToast(el){
+  if(!el || el.classList.contains('hide')) return;
+  el.classList.remove('show');
+  el.classList.add('hide');
+  setTimeout(()=>el.remove(), 300);
+}
+function clearAllNotifToasts(){
+  const wrap = document.getElementById('notif-toast-wrap');
+  if(wrap) wrap.innerHTML = '';
+}
+
+/* ---- generic live search: matches if the row text contains the typed letters (in order, not necessarily contiguous) ---- */
+function fuzzyMatch(text, query){
+  text = (text||'').toString().toLowerCase();
+  query = (query||'').toString().toLowerCase().trim();
+  if(!query) return true;
+  return text.includes(query);
+}
+function liveFilterTable(tbodyId, rows){
+  const tbody = document.getElementById(tbodyId);
+  if(tbody) tbody.innerHTML = rows;
+}
+function statutBadge(s){
+  const map = {
+    attente:['amber','En attente'], validee:['green','Validée'], refusee:['red','Refusée'],
+    recue:['teal','Reçue'], actif:['green','Actif'], inactif:['red','Inactif'],
+  };
+  const [c,l] = map[s] || ['grey', s];
+  return `<span class="badge ${c}">${l}</span>`;
+}
+function niveauBadge(n){
+  return n==='Critique' ? '<span class="badge red">Critique</span>' : '<span class="badge amber">Bas</span>';
+}
+
+/* ========================= RENDER ROUTER ========================= */
+function render(){
+  buildSidebar();
+  document.getElementById('topbar-title').textContent = PAGE_TITLE[state.route] || 'Tableau de bord';
+  const c = document.getElementById('content');
+  const renderers = {
+    dashboard: renderDashboard,
+    users: renderUsers,
+    roles: renderSimpleList.bind(null, 'roles'),
+    services: renderSimpleList.bind(null, 'services'),
+    categories: renderSimpleList.bind(null, 'categories'),
+    articles: renderArticles,
+    demandes: renderDemandes,
+    commandes: renderCommandes,
+    'commande-detail': renderCommandeDetail,
+    fournisseurs: renderFournisseurs,
+    alerts: renderAlerts,
+    history: renderHistory,
+    available: renderAvailable,
+    'my-demandes': renderMyDemandes,
+    'create-demande': renderCreateDemande,
+  };
+  (renderers[state.route] || renderDashboard)(c);
+}
+
+/* ========================= DASHBOARD ========================= */
+async function renderDashboard(c){
+  if(state.role==='service'){ renderDashboardService(c); return; }
+  await Promise.all([loadArticles(), loadDemandes(), loadHistorique(), loadCategories(), loadCommandes()]);
+  const totalStockQty = articles.reduce((s,a)=>s + a.stock,0);
+  const ruptureCount = articles.filter(a=>a.stock<=0).length;
+  const alertCount = articles.filter(a=>a.stock>0 && a.stock<=a.min).length + ruptureCount;
+  const colors = ['#2f6fed','#0d9488','#d97706','#7c3aed','#e11d48','#0891b2'];
+  const catSegments = articles.length ? categories
+    .map((cat,i)=>({label:cat.nom, count: articles.filter(a=>a.cat===cat.nom).length, color: colors[i%colors.length]}))
+    .filter(s=>s.count>0)
+    .map(s=>({...s, pct: Math.round(s.count/articles.length*100)})) : [];
+  c.innerHTML = `
+    <div class="kpi-grid">
+      <div class="kpi blue"><div class="ic">📦</div><div><div class="lbl">Nombre total d'articles</div><div class="val">${articles.length}</div></div></div>
+      <div class="kpi green"><div class="ic">💰</div><div><div class="lbl">Stock total</div><div class="val">${totalStockQty.toLocaleString('fr-FR')}</div></div></div>
+      <div class="kpi amber"><div class="ic">📄</div><div><div class="lbl">Demandes en attente</div><div class="val">${demandes.filter(d=>d.statut==='attente').length}</div></div></div>
+      <div class="kpi purple"><div class="ic">🛒</div><div><div class="lbl">Commandes en attente</div><div class="val">${commandes.filter(d=>d.statut==='attente').length}</div></div></div>
+    </div>
+    <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:22px;">
+      <div class="kpi red" style="cursor:pointer" onclick="state.route='alerts';render()"><div class="ic">📉</div><div><div class="lbl">Articles en rupture</div><div class="val">${ruptureCount}</div></div></div>
+      <div class="kpi amber" style="cursor:pointer" onclick="state.route='alerts';render()"><div class="ic">⚠</div><div><div class="lbl">Alertes de stock</div><div class="val">${alertCount}</div></div></div>
+    </div>
+    <div class="card" style="margin-bottom:22px">
+      <div class="card-head"><h3>Alertes de stock</h3><span class="link-sm" onclick="state.route='alerts';render()" style="cursor:pointer">Voir tout</span></div>
+      <div class="card-body" style="padding:0 18px 8px">
+        <table>
+          <thead><tr><th>Article</th><th>Stock</th><th>Min</th><th>Niveau</th></tr></thead>
+          <tbody>
+            ${computeAlerts().slice(0,5).map(a=>`
+              <tr>
+                <td>${escapeHtml(a.art)}</td>
+                <td>${a.stock}</td>
+                <td>${a.min}</td>
+                <td>${niveauBadge(a.niveau)}</td>
+              </tr>`).join('') || `<tr><td colspan="4" class="empty">Aucune alerte — tous les stocks sont au-dessus du minimum</td></tr>`}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:22px">
+      <div class="card-head"><h3>Demandes en attente</h3><span class="link-sm" onclick="state.route='demandes';state.demandeTab='attente';render()" style="cursor:pointer">Voir tout</span></div>
+      <div class="card-body" style="padding:0 18px 8px">
+        <table>
+          <thead><tr><th>N° Demande</th><th>Service</th><th>Demandeur</th><th>Quantité</th><th>Date</th><th>Statut</th></tr></thead>
+          <tbody>
+            ${demandes.filter(d=>d.statut==='attente').slice(0,5).map(d=>`
+              <tr style="cursor:pointer" onclick="state.route='demandes';state.demandeTab='attente';render()">
+                <td class="mono">${d.num}</td>
+                <td>${d.service}</td>
+                <td>${d.demandeur}</td>
+                <td>${d.qte}</td>
+                <td class="mono">${d.date}</td>
+                <td>${statutBadge(d.statut)}</td>
+              </tr>`).join('') || `<tr><td colspan="6" class="empty">Aucune demande en attente</td></tr>`}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-head"><h3>Derniers mouvements</h3><span class="link-sm" onclick="state.route='history';render()" style="cursor:pointer">Voir tout</span></div>
+        <div class="card-body" style="padding:0 18px 8px">
+          <table>
+            <thead><tr><th>N°</th><th>Article</th><th>Type</th><th>Quantité</th><th>Date</th><th>Utilisateur</th><th>Service</th></tr></thead>
+            <tbody>
+              ${historique.slice(0,5).map(h=>`
+                <tr>
+                  <td class="mono">${h.ref_num || '-'}</td>
+                  <td>${h.art}</td>
+                  <td>${h.type==='sortie'?'<span class="badge red">Sortie</span>':'<span class="badge green">Entrée</span>'}</td>
+                  <td class="${moveClass(h)}">${moveSign(h)}${h.qte}</td>
+                  <td class="mono">${h.date.split(' ')[0]}</td>
+                  <td>${h.user}</td>
+                  <td>${h.service || '-'}</td>
+                </tr>`).join('') || `<tr><td colspan="7" class="empty">Aucun mouvement</td></tr>`}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Stock par catégorie</h3></div>
+        <div class="card-body">
+          ${donut(catSegments, articles.length)}
+        </div>
+      </div>
+    </div>
+  `;
+}
+async function renderDashboardService(c){
+  await Promise.all([loadArticles(), loadDemandes()]);
+  c.innerHTML = `
+    <div class="kpi-grid">
+      <div class="kpi blue"><div class="ic">📦</div><div><div class="lbl">Articles disponibles</div><div class="val">${articles.length}</div></div></div>
+      <div class="kpi amber"><div class="ic">📄</div><div><div class="lbl">Mes demandes en attente</div><div class="val">${demandes.filter(d=>d.statut==='attente').length}</div></div></div>
+      <div class="kpi green"><div class="ic">✔</div><div><div class="lbl">Demandes validées</div><div class="val">${demandes.filter(d=>d.statut==='validee').length}</div></div></div>
+      <div class="kpi purple"><div class="ic">📋</div><div><div class="lbl">Total de mes demandes</div><div class="val">${demandes.length}</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>Mes dernières demandes</h3><button class="btn btn-blue" onclick="state.route='create-demande';render()">+ Nouvelle demande</button></div>
+      <div class="card-body" style="padding:0 18px 8px">
+        <table>
+          <thead><tr><th>N° Demande</th><th>Date</th><th>Articles</th><th>Statut</th></tr></thead>
+          <tbody>${demandes.map(d=>`<tr><td class="mono">${d.num}</td><td class="mono">${d.date}</td><td>${d.articles}</td><td>${statutBadge(d.statut)}</td></tr>`).join('') || `<tr><td colspan="4" class="empty">Aucune demande</td></tr>`}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+function donut(segments, total){
+  total = total ?? 0;
+  if(!segments.length){
+    return `
+      <div class="donut-wrap">
+        <div class="donut" style="background:conic-gradient(var(--border) 0% 100%);">
+          <div style="width:88px;height:88px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+            <div style="font-weight:800;font-size:16px;">0</div>
+            <div style="font-size:10px;color:var(--text-faint);">articles</div>
+          </div>
+        </div>
+        <div class="legend"><div class="item" style="color:var(--text-faint)">Aucun article</div></div>
+      </div>
+    `;
+  }
+  let acc = 0;
+  const stops = segments.map(s=>{
+    const start = acc; acc += s.pct;
+    return `${s.color} ${start}% ${acc}%`;
+  }).join(', ');
+  return `
+    <div class="donut-wrap">
+      <div class="donut" style="background:conic-gradient(${stops});">
+        <div style="width:88px;height:88px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+          <div style="font-weight:800;font-size:16px;">${total}</div>
+          <div style="font-size:10px;color:var(--text-faint);">articles</div>
+        </div>
+      </div>
+      <div class="legend">
+        ${segments.map(s=>`<div class="item"><span class="k"><span class="dot" style="background:${s.color}"></span>${s.label}</span><b>${s.pct}%</b></div>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+/* ========================= USERS ========================= */
+async function renderUsers(c){
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input id="user-search" placeholder="Rechercher..." oninput="filterUsers(this.value)"></div>
+      <button class="btn btn-blue" onclick="openAddUserModal()">+ Ajouter un utilisateur</button>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Nom</th><th>Email</th><th>Rôle</th><th>Service</th><th>Statut</th><th>Actions</th></tr></thead>
+        <tbody id="user-tbody"><tr><td colspan="6" class="empty">Chargement...</td></tr></tbody>
+      </table>
+      <div class="pagination" style="padding:14px 18px;" id="user-count"></div>
+    </div>
+  `;
+  await Promise.all([loadUsers(), loadServices()]);
+  fillUsers(users);
+}
+async function loadUsers(){
+  try{
+    const data = await apiGet('users_list.php');
+    if(data.success){ users = data.users; }
+    else { toast(data.message || 'Erreur lors du chargement des utilisateurs'); }
+  }catch(e){
+    toast('Impossible de contacter le serveur (vérifiez XAMPP)');
+  }
+}
+function fillUsers(list){
+  document.getElementById('user-tbody').innerHTML = list.map(u=>`
+    <tr>
+      <td style="font-weight:600">${u.nom}</td>
+      <td class="mono">${u.email}</td>
+      <td>${u.role}</td>
+      <td>${u.service}</td>
+      <td>${statutBadge(u.statut==='Actif'?'actif':'inactif')}</td>
+      <td><div class="act-icons"><button class="view" onclick="openEditUserModal(${u.id})">✎</button><button class="danger" onclick="deleteUser(${u.id})">🗑</button></div></td>
+    </tr>`).join('') || `<tr><td colspan="6" class="empty">Aucun utilisateur trouvé</td></tr>`;
+  document.getElementById('user-count').textContent = `Affichage de 1 à ${list.length} sur ${list.length} utilisateurs`;
+}
+function filterUsers(q){
+  fillUsers(users.filter(u => fuzzyMatch(u.nom,q)||fuzzyMatch(u.email,q)||fuzzyMatch(u.role,q)||fuzzyMatch(u.service,q)));
+}
+function userFormFields(u){
+  const isEdit = !!u;
+  u = u || {nom:'', username:'', email:'', role:'Responsable Service', service:'Informatique', statut:'Actif'};
+  // La liste vient uniquement de la table "services" : ajouter/supprimer un service dans la
+  // page "Services" se reflète donc directement ici (aucune valeur "orpheline" ajoutée à part).
+  return `
+    <div class="field"><label>Nom complet</label><input id="mf-nom" value="${u.nom}" placeholder="Ex : Amal Dridi"></div>
+    <div class="field"><label>Nom d'utilisateur</label><input id="mf-username" value="${u.username||''}" placeholder="Ex : amal.dridi" ${isEdit?'':''}></div>
+    <div class="field"><label>Email</label><input id="mf-email" value="${u.email}" placeholder="nom.prenom@entreprise.com"></div>
+    <div class="field"><label>Mot de passe${isEdit ? ' (laisser vide pour conserver l\'actuel)' : ''}</label><input id="mf-password" type="password" placeholder="${isEdit ? '••••••••' : 'Définir un mot de passe'}"></div>
+    <div class="field"><label>Rôle</label><select id="mf-role">
+      ${['Administrateur','Responsable Achats','Responsable Service'].map(r=>`<option ${u.role===r?'selected':''}>${r}</option>`).join('')}
+    </select></div>
+    <div class="field"><label>Service</label><select id="mf-service">
+      ${services.map(s=>`<option ${u.service && s.nom.toLowerCase()===u.service.toLowerCase()?'selected':''}>${escapeHtml(s.nom)}</option>`).join('')}
+    </select></div>
+    <div class="field"><label>Statut</label><select id="mf-statut">
+      <option ${u.statut==='Actif'?'selected':''}>Actif</option>
+      <option ${u.statut==='Inactif'?'selected':''}>Inactif</option>
+    </select></div>
+  `;
+}
+async function openAddUserModal(){
+  await loadServices(); // toujours la liste la plus fraîche des services (page Services)
+  openModal('Ajouter un utilisateur', userFormFields(), `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveNewUser()">Ajouter</button>
+  `);
+}
+async function saveNewUser(){
+  const nom = document.getElementById('mf-nom').value.trim();
+  const username = document.getElementById('mf-username').value.trim();
+  const email = document.getElementById('mf-email').value.trim();
+  const password = document.getElementById('mf-password').value;
+  const role = document.getElementById('mf-role').value;
+  const service = document.getElementById('mf-service').value;
+  const statut = document.getElementById('mf-statut').value;
+  if(!nom || !username || !email || !password){ toast('Veuillez remplir le nom, le nom d\'utilisateur, l\'email et le mot de passe'); return; }
+  let data;
+  try{
+    data = await apiCall('users_add.php', {nom, username, email, password, role, service, statut});
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || "Erreur lors de l'ajout"); return; }
+  closeModal();
+  toast('Utilisateur ajouté dans la base de données');
+  renderUsers(document.getElementById('content'));
+}
+async function openEditUserModal(id){
+  const u = users.find(x=>x.id===id);
+  if(!u) return;
+  await loadServices(); // toujours la liste la plus fraîche des services (page Services)
+  openModal('Modifier l\'utilisateur', userFormFields(u), `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveEditUser(${id})">Enregistrer</button>
+  `);
+}
+async function saveEditUser(id){
+  const nom = document.getElementById('mf-nom').value.trim();
+  const username = document.getElementById('mf-username').value.trim();
+  const email = document.getElementById('mf-email').value.trim();
+  const password = document.getElementById('mf-password').value; // vide = conserver l'actuel
+  const role = document.getElementById('mf-role').value;
+  const service = document.getElementById('mf-service').value;
+  const statut = document.getElementById('mf-statut').value;
+  if(!nom || !username || !email){ toast('Veuillez remplir le nom, le nom d\'utilisateur et l\'email'); return; }
+  let data;
+  try{
+    data = await apiCall('users_edit.php', {id, nom, username, email, password, role, service, statut});
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la modification'); return; }
+  closeModal();
+  toast('Utilisateur modifié dans la base de données');
+  renderUsers(document.getElementById('content'));
+}
+async function deleteUser(id){
+  const u = users.find(x=>x.id===id);
+  if(!u) return;
+  if(u.username === 'rayenyoussef'){ toast('Impossible de supprimer le compte administrateur principal'); return; }
+  if(!confirm(`Supprimer ${u.nom} ?`)) return;
+  let data;
+  try{
+    data = await apiCall('users_delete.php', {id});
+  }catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la suppression'); return; }
+  toast('Utilisateur supprimé de la base de données');
+  renderUsers(document.getElementById('content'));
+}
+
+/* ========================= SIMPLE LISTS (roles/services/categories/fournisseurs) ========================= */
+async function renderSimpleList(type, c){
+  const meta = SIMPLE_META[type];
+  if(meta.readonly){ renderRolesReadonly(c); return; }
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input placeholder="Rechercher..." oninput="filterSimple('${type}',this.value)"></div>
+      <button class="btn btn-blue" onclick="openAddSimpleModal('${type}')">+ Ajouter</button>
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>${meta.ic} Nom</th><th>Actions</th></tr></thead>
+        <tbody id="simple-tbody-${type}"><tr><td colspan="2" class="empty">Chargement...</td></tr></tbody>
+      </table>
+    </div></div>
+  `;
+  if(meta.db) await meta.reload();
+  fillSimple(type, currentSimpleList(type));
+}
+function renderRolesReadonly(c){
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input placeholder="Rechercher..." oninput="filterRolesReadonly(this.value)"></div>
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>🛡 Rôle</th><th>Description</th></tr></thead>
+        <tbody id="simple-tbody-roles"></tbody>
+      </table>
+    </div></div>
+  `;
+  fillRolesReadonly(SIMPLE_LISTS.roles);
+}
+function fillRolesReadonly(list){
+  const tbody = document.getElementById('simple-tbody-roles');
+  if(!tbody) return;
+  tbody.innerHTML = list.map(name=>`
+    <tr><td style="font-weight:600">${escapeHtml(name)}</td><td style="color:var(--text-dim)">${escapeHtml(ROLE_DESCRIPTIONS[name]||'')}</td></tr>
+  `).join('') || `<tr><td colspan="2" class="empty">Aucun rôle trouvé</td></tr>`;
+}
+function filterRolesReadonly(q){
+  fillRolesReadonly(SIMPLE_LISTS.roles.filter(name=>fuzzyMatch(name,q)));
+}
+function currentSimpleList(type){
+  const meta = SIMPLE_META[type];
+  return meta.db ? meta.getList() : SIMPLE_LISTS[type].map((n,i)=>({id:i, nom:n}));
+}
+function fillSimple(type, list){
+  const tbody = document.getElementById('simple-tbody-'+type);
+  if(!tbody) return;
+  tbody.innerHTML = list.map(item=>
+    `<tr><td style="font-weight:600">${escapeHtml(item.nom)}</td><td><div class="act-icons"><button class="view" onclick="openEditSimpleModal('${type}',${item.id})">✎</button><button class="danger" onclick="deleteSimple('${type}',${item.id})">🗑</button></div></td></tr>`
+  ).join('') || `<tr><td colspan="2" class="empty">Aucun élément trouvé</td></tr>`;
+}
+function filterSimple(type, q){
+  fillSimple(type, currentSimpleList(type).filter(item => fuzzyMatch(item.nom, q)));
+}
+function openAddSimpleModal(type){
+  const meta = SIMPLE_META[type];
+  openModal(`Ajouter ${meta.title.toLowerCase()}`, `<div class="field"><label>Nom</label><input id="mf-simple" placeholder="Nom"></div>`, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveNewSimple('${type}')">Ajouter</button>
+  `);
+}
+async function saveNewSimple(type){
+  const val = document.getElementById('mf-simple').value.trim();
+  if(!val){ toast('Veuillez saisir un nom'); return; }
+  const meta = SIMPLE_META[type];
+  if(meta.db){
+    const data = await apiCall(`${meta.api}_add.php`, {nom: val});
+    if(!data.success){ toast(data.message || "Erreur lors de l'ajout"); return; }
+  } else {
+    SIMPLE_LISTS[type].push(val);
+  }
+  closeModal();
+  toast('Élément ajouté');
+  render();
+}
+function openEditSimpleModal(type, id){
+  const item = currentSimpleList(type).find(x=>x.id===id);
+  if(!item) return;
+  openModal(`Modifier`, `<div class="field"><label>Nom</label><input id="mf-simple" value="${escapeHtml(item.nom)}"></div>`, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveEditSimple('${type}',${id})">Enregistrer</button>
+  `);
+}
+async function saveEditSimple(type, id){
+  const val = document.getElementById('mf-simple').value.trim();
+  if(!val){ toast('Veuillez saisir un nom'); return; }
+  const meta = SIMPLE_META[type];
+  if(meta.db){
+    const data = await apiCall(`${meta.api}_edit.php`, {id, nom: val});
+    if(!data.success){ toast(data.message || "Erreur lors de la modification"); return; }
+  } else {
+    SIMPLE_LISTS[type][id] = val;
+  }
+  closeModal();
+  toast('Élément modifié');
+  render();
+}
+async function deleteSimple(type, id){
+  const item = currentSimpleList(type).find(x=>x.id===id);
+  if(!item) return;
+  if(!confirm(`Supprimer "${item.nom}" ?`)) return;
+  const meta = SIMPLE_META[type];
+  if(meta.db){
+    const data = await apiCall(`${meta.api}_delete.php`, {id});
+    if(!data.success){ toast(data.message || "Erreur lors de la suppression"); return; }
+  } else {
+    SIMPLE_LISTS[type].splice(id,1);
+  }
+  toast('Élément supprimé');
+  render();
+}
+
+/* ========================= FOURNISSEURS (base de données) ========================= */
+async function renderFournisseurs(c){
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input id="fourn-search" placeholder="Rechercher..." oninput="filterFournisseurs(this.value)"></div>
+      ${state.role!=='service' ? '<button class="btn btn-blue" onclick="openAddFournisseurModal()">+ Ajouter</button>' : ''}
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>🚚 Nom</th>${state.role!=='service'?'<th>Actions</th>':''}</tr></thead>
+        <tbody id="fourn-tbody"><tr><td colspan="2" class="empty">Chargement...</td></tr></tbody>
+      </table>
+    </div></div>
+  `;
+  await loadFournisseurs();
+  fillFournisseurs(fournisseurs);
+}
+function fillFournisseurs(list){
+  const tbody = document.getElementById('fourn-tbody');
+  if(!tbody) return;
+  tbody.innerHTML = list.map(f=>`
+    <tr>
+      <td style="font-weight:600">${f.nom}</td>
+      ${state.role!=='service'?`<td><div class="act-icons"><button class="view" onclick="openEditFournisseurModal(${f.id})">✎</button><button class="danger" onclick="deleteFournisseur(${f.id})">🗑</button></div></td>`:''}
+    </tr>`).join('') || `<tr><td colspan="${state.role!=='service'?2:1}" class="empty">Aucun fournisseur trouvé</td></tr>`;
+}
+function filterFournisseurs(q){
+  fillFournisseurs(fournisseurs.filter(f=>fuzzyMatch(f.nom,q)));
+}
+function openAddFournisseurModal(){
+  openModal('Ajouter un fournisseur', `<div class="field"><label>Nom</label><input id="mf-fourn-nom" placeholder="Nom du fournisseur"></div>`, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveNewFournisseur()">Ajouter</button>
+  `);
+}
+async function saveNewFournisseur(){
+  const nom = document.getElementById('mf-fourn-nom').value.trim();
+  if(!nom){ toast('Veuillez saisir un nom'); return; }
+  let data;
+  try{ data = await apiCall('fournisseurs_add.php', {nom}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || "Erreur lors de l'ajout"); return; }
+  closeModal();
+  toast('Fournisseur ajouté dans la base de données');
+  renderFournisseurs(document.getElementById('content'));
+}
+function openEditFournisseurModal(id){
+  const f = fournisseurs.find(x=>x.id===id);
+  if(!f) return;
+  openModal('Modifier le fournisseur', `<div class="field"><label>Nom</label><input id="mf-fourn-nom" value="${f.nom}"></div>`, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveEditFournisseur(${id})">Enregistrer</button>
+  `);
+}
+async function saveEditFournisseur(id){
+  const nom = document.getElementById('mf-fourn-nom').value.trim();
+  if(!nom){ toast('Veuillez saisir un nom'); return; }
+  let data;
+  try{ data = await apiCall('fournisseurs_edit.php', {id, nom}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la modification'); return; }
+  closeModal();
+  toast('Fournisseur modifié dans la base de données');
+  renderFournisseurs(document.getElementById('content'));
+}
+async function deleteFournisseur(id){
+  const f = fournisseurs.find(x=>x.id===id);
+  if(!f) return;
+  if(!confirm(`Supprimer "${f.nom}" ?`)) return;
+  let data;
+  try{ data = await apiCall('fournisseurs_delete.php', {id}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la suppression'); return; }
+  toast('Fournisseur supprimé de la base de données');
+  renderFournisseurs(document.getElementById('content'));
+}
+
+/* ========================= ARTICLES ========================= */
+async function renderArticles(c){
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input id="art-search" placeholder="Rechercher un article..." oninput="filterArticles(this.value)"></div>
+      ${state.role!=='service' ? '<button class="btn btn-blue" onclick="openAddArticleModal()">+ Ajouter un article</button>' : ''}
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Code</th><th>Désignation</th><th>Catégorie</th><th>Stock actuel</th><th>Stock min</th><th>Stock max</th><th>Emplacement</th>${state.role!=='service'?'<th>Actions</th>':''}</tr></thead>
+        <tbody id="art-tbody"><tr><td colspan="8" class="empty">Chargement...</td></tr></tbody>
+      </table>
+      <div class="pagination" style="padding:14px 18px;">
+        <span id="art-count"></span>
+      </div>
+    </div>
+  `;
+  await Promise.all([loadArticles(), loadCategories()]);
+  fillArticles(articles);
+}
+function fillArticles(list){
+  document.getElementById('art-tbody').innerHTML = list.map(a=>`
+    <tr>
+      <td class="mono">${a.code}</td>
+      <td style="font-weight:600">${a.nom}</td>
+      <td>${a.cat}</td>
+      <td>${a.stock<=a.min?`<span class="badge red">${a.stock}</span>`:a.stock}</td>
+      <td>${a.min}</td>
+      <td>${a.max}</td>
+      <td class="mono">${a.emp}</td>
+      ${state.role!=='service'?`<td><div class="act-icons"><button class="view" onclick="openEditArticleModal(${a.id})">✎</button><button class="danger" onclick="deleteArticle(${a.id})">🗑</button></div></td>`:''}
+    </tr>`).join('') || `<tr><td colspan="${state.role!=='service'?8:7}" class="empty">Aucun article trouvé</td></tr>`;
+  document.getElementById('art-count').textContent = `Affichage de 1 à ${list.length} sur ${list.length} articles`;
+}
+function filterArticles(q){
+  fillArticles(articles.filter(a=>fuzzyMatch(a.nom,q)||fuzzyMatch(a.code,q)||fuzzyMatch(a.cat,q)));
+}
+function renderAvailable(c){ renderArticles(c); }
+function articleFormFields(a){
+  a = a || {code:'', nom:'', cat:'Informatique', stock:0, min:0, max:0, emp:''};
+  return `
+    <div class="field"><label>Code</label><input id="mf-code" value="${a.code}" placeholder="Ex : ART006"></div>
+    <div class="field"><label>Désignation</label><input id="mf-nom" value="${a.nom}" placeholder="Ex : Souris optique"></div>
+    <div class="field"><label>Catégorie</label><select id="mf-cat">${categories.map(cc=>`<option ${a.cat===cc.nom?'selected':''}>${cc.nom}</option>`).join('')}</select></div>
+    <div class="form-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:0">
+      <div class="field"><label>Stock actuel</label><input id="mf-stock" type="number" value="${a.stock}"></div>
+      <div class="field"><label>Stock min</label><input id="mf-min" type="number" value="${a.min}"></div>
+      <div class="field"><label>Stock max</label><input id="mf-max" type="number" value="${a.max}"></div>
+    </div>
+    <div class="field" style="margin-top:14px"><label>Emplacement</label><input id="mf-emp" value="${a.emp}" placeholder="Ex : B1-S2"></div>
+  `;
+}
+function openAddArticleModal(){
+  openModal('Ajouter un article', articleFormFields(), `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveNewArticle()">Ajouter</button>
+  `);
+}
+async function saveNewArticle(){
+  const code = document.getElementById('mf-code').value.trim();
+  const nom = document.getElementById('mf-nom').value.trim();
+  if(!code || !nom){ toast('Veuillez saisir un code et une désignation'); return; }
+  const payload = {
+    code, nom, cat: document.getElementById('mf-cat').value,
+    stock: +document.getElementById('mf-stock').value||0,
+    min: +document.getElementById('mf-min').value||0,
+    max: +document.getElementById('mf-max').value||0,
+    emp: document.getElementById('mf-emp').value.trim(),
+  };
+  let data;
+  try{ data = await apiCall('articles_add.php', payload); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || "Erreur lors de l'ajout"); return; }
+  closeModal();
+  toast('Article ajouté dans la base de données');
+  renderArticles(document.getElementById('content'));
+}
+function openEditArticleModal(id){
+  const a = articles.find(x=>x.id===id);
+  if(!a) return;
+  openModal('Modifier l\'article', articleFormFields(a), `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveEditArticle(${id})">Enregistrer</button>
+  `);
+}
+async function saveEditArticle(id){
+  const code = document.getElementById('mf-code').value.trim();
+  const nom = document.getElementById('mf-nom').value.trim();
+  if(!code || !nom){ toast('Veuillez saisir un code et une désignation'); return; }
+  const payload = {
+    id, code, nom, cat: document.getElementById('mf-cat').value,
+    stock: +document.getElementById('mf-stock').value||0,
+    min: +document.getElementById('mf-min').value||0,
+    max: +document.getElementById('mf-max').value||0,
+    emp: document.getElementById('mf-emp').value.trim(),
+  };
+  let data;
+  try{ data = await apiCall('articles_edit.php', payload); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la modification'); return; }
+  closeModal();
+  toast('Article modifié dans la base de données');
+  renderArticles(document.getElementById('content'));
+}
+async function deleteArticle(id){
+  const a = articles.find(x=>x.id===id);
+  if(!a) return;
+  if(!confirm(`Supprimer l'article "${a.nom}" ?`)) return;
+  let data;
+  try{ data = await apiCall('articles_delete.php', {id}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la suppression'); return; }
+  toast('Article supprimé de la base de données');
+  renderArticles(document.getElementById('content'));
+}
+
+/* ========================= DEMANDES ========================= */
+async function renderDemandes(c){
+  c.innerHTML = `<div class="card"><div class="card-body"><span class="empty">Chargement...</span></div></div>`;
+  await loadDemandes();
+  fillDemandesPage(c);
+}
+function fillDemandesPage(c){
+  const tabs = [['toutes','Toutes'],['attente','En attente'],['validee','Validées']];
+  let list = demandes.filter(d=>fuzzyMatch(d.num,state.demandeSearch)||fuzzyMatch(d.service,state.demandeSearch)||fuzzyMatch(d.demandeur,state.demandeSearch));
+  if(state.demandeTab!=='toutes') list = list.filter(d=>d.statut===state.demandeTab);
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="tabs">${tabs.map(([k,l])=>`<div class="tab ${state.demandeTab===k?'active':''}" onclick="setDemandeTab('${k}')">${l} <span class="count">${k==='toutes'?demandes.length:demandes.filter(d=>d.statut===k).length}</span></div>`).join('')}</div>
+      <div class="search-box"><span class="sic">🔍</span><input value="${state.demandeSearch}" placeholder="Rechercher..." oninput="filterDemandes(this.value)"></div>
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>N° Demande</th><th>Service</th><th>Demandeur</th><th>Date</th><th>Statut</th><th>Actions</th></tr></thead>
+        <tbody>
+          ${list.map(d=>`
+            <tr>
+              <td class="mono">${d.num}</td>
+              <td>${d.service}</td>
+              <td>${d.demandeur}</td>
+              <td class="mono">${d.date}</td>
+              <td>${statutBadge(d.statut)}</td>
+              <td><div class="act-icons">
+                <button class="view" title="Voir" onclick="openDemandeDetail('${d.num}')">👁</button>
+              </div></td>
+            </tr>`).join('') || `<tr><td colspan="6" class="empty">Aucune demande dans cette catégorie</td></tr>`}
+        </tbody>
+      </table>
+    </div></div>
+  `;
+}
+function setDemandeTab(t){ state.demandeTab=t; state.demandeSearch=''; fillDemandesPage(document.getElementById('content')); }
+function filterDemandes(q){ state.demandeSearch=q; fillDemandesPage(document.getElementById('content')); }
+async function openDemandeDetail(num){
+  const d = demandes.find(x=>x.num===num);
+  if(!d) return;
+  openModal(`Demande ${d.num}`, `
+    <div class="detail-line"><span class="k">Service</span><span class="v">${d.service}</span></div>
+    <div class="detail-line"><span class="k">Demandeur</span><span class="v">${d.demandeur}</span></div>
+    <div class="detail-line"><span class="k">Date</span><span class="v">${d.date}</span></div>
+    <div class="detail-line"><span class="k">Statut</span><span class="v">${statutBadge(d.statut)}</span></div>
+    <h3 style="font-size:13.5px;margin:16px 0 8px;">Articles demandés</h3>
+    <table>
+      <thead><tr><th>Article</th><th>Quantité</th></tr></thead>
+      <tbody id="dd-lignes"><tr><td colspan="2" class="empty">Chargement...</td></tr></tbody>
+    </table>
+  `, `<button class="btn btn-ghost" onclick="closeModal()">Fermer</button>`);
+
+  try{
+    const data = await apiGet(`demande_lignes_list.php?num=${encodeURIComponent(num)}`);
+    const tbody = document.getElementById('dd-lignes');
+    if(!tbody) return; // la modale a été fermée entre-temps
+    if(data.success && data.lignes.length){
+      tbody.innerHTML = data.lignes.map(l=>`<tr><td>${escapeHtml(l.nom)}</td><td>${l.qte}</td></tr>`).join('');
+    } else {
+      tbody.innerHTML = `<tr><td colspan="2" class="empty">Aucun détail disponible</td></tr>`;
+    }
+  }catch(e){
+    const tbody = document.getElementById('dd-lignes');
+    if(tbody) tbody.innerHTML = `<tr><td colspan="2" class="empty">Impossible de charger le détail</td></tr>`;
+  }
+}
+async function setDemandeStatut(num, statut){
+  let data;
+  try{ data = await apiCall('demandes_update_statut.php', {num, statut}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la mise à jour'); return; }
+  await loadArticles();
+  toast(statut==='validee' ? `${num} validée — stock mis à jour` : `${num} refusée`);
+  renderDemandes(document.getElementById('content'));
+}
+async function ackDemandeNotif(num){
+  try{ await apiCall('demandes_ack_notif.php', {num}); }catch(e){ /* silencieux */ }
+  const d = demandes.find(x=>x.num===num);
+  if(d) d.notif_lue = 1;
+}
+async function deleteDemande(num){
+  if(!confirm(`Supprimer la demande "${num}" ?`)) return;
+  let data;
+  try{ data = await apiCall('demandes_delete.php', {num}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la suppression'); return; }
+  toast('Demande supprimée de la base de données');
+  renderDemandes(document.getElementById('content'));
+}
+
+/* ========================= MES DEMANDES (service) ========================= */
+async function renderMyDemandes(c){
+  c.innerHTML = `<div class="card"><div class="card-body"><span class="empty">Chargement...</span></div></div>`;
+  await loadDemandes();
+  fillMyDemandesPage(c);
+}
+function fillMyDemandesPage(c){
+  const tabs = [['toutes','Toutes'],['attente','En attente'],['validee','Validées']];
+  let list = demandes.filter(d=>d.demandeur===state.userName);
+  if(state.mesDemandesTab!=='toutes') list = list.filter(d=>d.statut===state.mesDemandesTab);
+  c.innerHTML = `
+    <div class="page-head"><div class="tabs">${tabs.map(([k,l])=>`<div class="tab ${state.mesDemandesTab===k?'active':''}" onclick="setMesTab('${k}')">${l}</div>`).join('')}</div></div>
+    <div class="card">
+      <div class="card-head"><h3>Mes demandes</h3></div>
+      <div class="card-body" style="padding:0">
+        <table>
+          <thead><tr><th>N° Demande</th><th>Date</th><th>Articles</th><th>Quantité totale</th><th>Statut</th><th>Actions</th></tr></thead>
+          <tbody>${list.map(d=>`<tr><td class="mono">${d.num}</td><td class="mono">${d.date}</td><td>${d.articles}</td><td>${d.qte}</td><td>${statutBadge(d.statut)}</td><td><div class="act-icons"><button class="view" onclick="openDemandeDetail('${d.num}')">👁</button></div></td></tr>`).join('') || `<tr><td colspan="6" class="empty">Aucune demande</td></tr>`}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+function setMesTab(t){ state.mesDemandesTab=t; fillMyDemandesPage(document.getElementById('content')); }
+
+/* ========================= CREER DEMANDE ========================= */
+let demandeDraft = null;
+async function renderCreateDemande(c){
+  demandeDraft = [];
+  await loadServices();
+  c.innerHTML = `
+    <div class="card">
+      <div class="card-head"><h3>Nouvelle demande</h3></div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="field"><label>Service</label>${
+            state.role === 'service'
+              ? `<input value="${escapeHtml(state.userService || '')}" readonly>
+                 <input type="hidden" id="nd-service" value="${escapeHtml(state.userService || '')}">`
+              : `<select id="nd-service">${services.map(s=>`<option ${s.nom===state.userService?'selected':''}>${s.nom}</option>`).join('')}</select>`
+          }</div>
+          <div class="field"><label>Demandeur</label><input value="${state.userName}" readonly></div>
+          <div class="field"><label>Date</label><input id="nd-date" type="text" value="${new Date().toLocaleDateString('fr-FR')}"></div>
+        </div>
+        <h3 style="font-size:14px;margin:22px 0 10px;">Articles demandés</h3>
+        <table>
+          <thead><tr><th>Article</th><th>Stock disponible</th><th>Quantité demandée</th><th>Actions</th></tr></thead>
+          <tbody id="nd-tbody"><tr><td colspan="4" class="empty">Chargement...</td></tr></tbody>
+        </table>
+        <div style="margin:12px 0 22px;"><span class="link-sm" style="cursor:pointer" onclick="addDemandeArticleRow()">+ Ajouter un article</span></div>
+        <div class="field"><label>Commentaire (optionnel)</label><input id="nd-comment" placeholder="Entrez un commentaire..."></div>
+        <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px;">
+          <button class="btn btn-ghost" onclick="state.route='my-demandes';render()">Annuler</button>
+          <button class="btn btn-blue" onclick="submitDemande()">Envoyer la demande</button>
+        </div>
+      </div>
+    </div>
+  `;
+  await loadArticles();
+  fillDemandeDraft();
+}
+function fillDemandeDraft(){
+  document.getElementById('nd-tbody').innerHTML = demandeDraft.map((a,i)=>{
+    // Un article peut être choisi sur cette ligne s'il n'est pas déjà utilisé par une AUTRE ligne
+    // (on garde l'article actuel de la ligne dans la liste même s'il est "utilisé" par elle-même).
+    const usedElsewhere = demandeDraft.filter((d,j)=>j!==i).map(d=>d.id);
+    const options = articles.filter(art=>!usedElsewhere.includes(art.id));
+    const selectHtml = `<select style="min-width:180px" onchange="changeDemandeArticleRow(${i}, this.value)">
+      ${options.map(art=>`<option value="${art.id}" ${art.id===a.id?'selected':''}>${escapeHtml(art.nom)}</option>`).join('')}
+    </select>`;
+    return `
+    <tr>
+      <td style="font-weight:600">${selectHtml}</td>
+      <td>${a.dispo}</td>
+      <td><input type="number" style="width:80px;padding:6px 8px;border:1.5px solid var(--border);border-radius:7px" value="${a.qte}" min="1" max="${a.dispo}" onchange="demandeDraft[${i}].qte=+this.value"></td>
+      <td><div class="act-icons"><button class="danger" onclick="removeDemandeArticleRow(${i})">🗑</button></div></td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="4" class="empty">Aucun article ajouté</td></tr>`;
+}
+function changeDemandeArticleRow(i, newArticleId){
+  const art = articles.find(a=>a.id === +newArticleId);
+  if(!art) return;
+  demandeDraft[i] = {id: art.id, art: art.nom, dispo: art.stock, qte: Math.min(demandeDraft[i].qte || 1, art.stock || 1) || 1};
+  fillDemandeDraft();
+}
+function addDemandeArticleRow(){
+  const used = demandeDraft.map(d=>d.art);
+  const avail = articles.filter(a=>!used.includes(a.nom));
+  if(!avail.length){ toast(articles.length ? 'Tous les articles sont déjà ajoutés' : "Aucun article n'existe encore"); return; }
+  const pick = avail[0];
+  demandeDraft.push({id: pick.id, art: pick.nom, dispo: pick.stock, qte: 1});
+  fillDemandeDraft();
+}
+function removeDemandeArticleRow(i){
+  demandeDraft.splice(i,1);
+  fillDemandeDraft();
+}
+async function submitDemande(){
+  if(!demandeDraft.length){ toast('Ajoutez au moins un article'); return; }
+  const totalQte = demandeDraft.reduce((s,a)=>s+(+a.qte||0),0);
+  const payload = {
+    service: document.getElementById('nd-service').value,
+    demandeur: state.userName,
+    date: document.getElementById('nd-date').value,
+    articles: demandeDraft.length,
+    qte: totalQte,
+    lignes: demandeDraft.map(a=>({article_id: a.id, qte: +a.qte||0})),
+  };
+  let data;
+  try{ data = await apiCall('demandes_add.php', payload); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || "Erreur lors de l'envoi"); return; }
+  toast(data.partielle
+    ? `Demande envoyée : ${data.num_validee} livrée immédiatement, ${data.num_attente} en attente pour le reste du stock`
+    : 'Demande envoyée avec succès');
+  state.route = 'my-demandes';
+  render();
+}
+
+/* ========================= COMMANDES ========================= */
+async function renderCommandes(c){
+  c.innerHTML = `<div class="card"><div class="card-body"><span class="empty">Chargement...</span></div></div>`;
+  await Promise.all([loadCommandes(), loadArticles(), loadFournisseurs()]);
+  fillCommandesPage(c);
+}
+let commandesView = [];
+function fillCommandesPage(c){
+  const tabs = [['attente','En attente'],['recue','Reçues']];
+  const list = commandes.filter(cm=>cm.statut===state.commandeTab && (fuzzyMatch(cm.num,state.commandeSearch)||fuzzyMatch(cm.fournisseur,state.commandeSearch)));
+  commandesView = list;
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="tabs">${tabs.map(([k,l])=>`<div class="tab ${state.commandeTab===k?'active':''}" onclick="setCommandeTab('${k}')">${l}</div>`).join('')}</div>
+      <div style="display:flex;gap:10px">
+        <div class="search-box"><span class="sic">🔍</span><input value="${state.commandeSearch}" placeholder="Rechercher..." oninput="filterCommandes(this.value)"></div>
+        <button class="btn btn-ghost" onclick="openExportCommandesModal()">⬇ Télécharger</button>
+        <button class="btn btn-blue" onclick="openAddCommandeModal()">+ Nouvelle commande</button>
+      </div>
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>N° Commande</th><th>Fournisseur</th><th>Date</th><th>Montant</th><th>Statut</th><th>Actions</th></tr></thead>
+        <tbody>
+          ${list.map(cm=>`
+            <tr>
+              <td class="mono">${cm.num}</td>
+              <td>${escapeHtml(cm.fournisseur)}</td>
+              <td class="mono">${cm.date}</td>
+              <td>${fmt(cm.montant)} DT</td>
+              <td>${statutBadge(cm.statut)}</td>
+              <td><div class="act-icons"><button class="view" onclick="openCommande('${cm.num}')">👁</button><button onclick="openEditCommandeModal('${cm.num}')">✎</button></div></td>
+            </tr>`).join('') || `<tr><td colspan="6" class="empty">Aucune commande</td></tr>`}
+        </tbody>
+      </table>
+    </div></div>
+  `;
+}
+function setCommandeTab(t){ state.commandeTab=t; state.commandeSearch=''; renderCommandes(document.getElementById('content')); }
+function filterCommandes(q){ state.commandeSearch=q; fillCommandesPage(document.getElementById('content')); }
+function openCommande(num){ state.route='commande-detail'; state.routeParam=num; render(); }
+function openAddCommandeModal(){
+  if(!articles.length){ toast("Aucun article n'existe encore — ajoutez-en un d'abord"); return; }
+  openModal('Nouvelle commande', `
+    <div class="field"><label>Fournisseur</label><select id="mf-fournisseur">${fournisseurs.map(f=>`<option>${f.nom}</option>`).join('')}</select></div>
+    <div class="field"><label>Article</label><select id="mf-article">${articles.map(a=>`<option value="${a.id}">${escapeHtml(a.nom)}</option>`).join('')}</select></div>
+    <div class="form-grid" style="grid-template-columns:1fr 1fr;margin-bottom:0">
+      <div class="field"><label>Quantité</label><input id="mf-qte" type="number" value="10" min="1"></div>
+      <div class="field"><label>Prix unitaire (DT)</label><input id="mf-pu" type="number" value="10" step="0.001"></div>
+    </div>
+  `, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveNewCommande()">Créer</button>
+  `);
+}
+async function saveNewCommande(){
+  const articleId = +document.getElementById('mf-article').value||0;
+  const qte = +document.getElementById('mf-qte').value||0;
+  const pu = +document.getElementById('mf-pu').value||0;
+  const fournisseur = document.getElementById('mf-fournisseur').value;
+  if(!fournisseur || !articleId || qte<1){ toast('Veuillez remplir tous les champs correctement'); return; }
+  let data;
+  try{ data = await apiCall('commandes_add.php', {fournisseur, article_id: articleId, qte, pu, date: new Date().toLocaleDateString('fr-FR')}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || "Erreur lors de la création"); return; }
+  closeModal();
+  toast('Commande créée');
+  state.commandeTab='attente';
+  renderCommandes(document.getElementById('content'));
+}
+function openEditCommandeModal(num){
+  const cm = commandes.find(x=>x.num===num);
+  openModal(`Modifier ${cm.num}`, `
+    <div class="field"><label>Fournisseur</label><select id="mf-fournisseur">${fournisseurs.map(f=>`<option ${cm.fournisseur===f.nom?'selected':''}>${f.nom}</option>`).join('')}</select></div>
+    <div class="field"><label>Montant total (DT)</label><input id="mf-montant" type="number" value="${cm.montant}" step="0.001"></div>
+  `, `
+    <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+    <button class="btn btn-blue" onclick="saveEditCommande('${num}')">Enregistrer</button>
+  `);
+}
+async function saveEditCommande(num){
+  const fournisseur = document.getElementById('mf-fournisseur').value;
+  const montant = +document.getElementById('mf-montant').value||0;
+  let data;
+  try{ data = await apiCall('commandes_edit.php', {num, fournisseur, montant}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la modification'); return; }
+  closeModal();
+  toast('Commande modifiée');
+  await loadCommandes();
+  render();
+}
+
+function renderCommandeDetail(c){
+  const cm = commandes.find(x=>x.num===state.routeParam) || commandes[0];
+  c.innerHTML = `
+    <div class="crumb"><a onclick="state.route='commandes';render()" style="cursor:pointer">Commandes</a> / ${cm.num}</div>
+    <div class="card">
+      <div class="card-head"><h3>Commande : ${cm.num}</h3></div>
+      <div class="card-body">
+        <div class="detail-grid">
+          <div class="detail-box"><div class="lbl">Fournisseur</div><div class="val">${cm.fournisseur}</div></div>
+          <div class="detail-box"><div class="lbl">Date</div><div class="val">${cm.date}</div></div>
+          <div class="detail-box"><div class="lbl">Statut</div><div class="val">${statutBadge(cm.statut)}</div></div>
+          <div class="detail-box"><div class="lbl">Montant total</div><div class="val">${fmt(cm.montant)} DT</div></div>
+        </div>
+        <h3 style="font-size:14px;margin:6px 0 10px;">Articles</h3>
+        <table>
+          <thead><tr><th>Article</th><th>Quantité</th><th>Prix unitaire (DT)</th><th>Sous-total</th></tr></thead>
+          <tbody>
+            ${cm.items.map(it=>`<tr><td style="font-weight:600">${it.art}</td><td>${it.qte}</td><td>${fmt(it.pu)}</td><td>${fmt(it.qte*it.pu)}</td></tr>`).join('')}
+            <tr><td colspan="3" style="text-align:right;font-weight:700">Total</td><td style="font-weight:800">${fmt(cm.montant)} DT</td></tr>
+          </tbody>
+        </table>
+        <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px;">
+          <button class="btn btn-ghost" onclick="openEditCommandeModal('${cm.num}')">Modifier</button>
+          ${cm.statut==='attente' ? `<button class="btn btn-blue" onclick="receiveCommande('${cm.num}')">Recevoir la commande</button>` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}
+async function receiveCommande(num){
+  let data;
+  try{ data = await apiCall('commandes_receive.php', {num}); }
+  catch(e){ toast('Impossible de contacter le serveur (vérifiez XAMPP)'); return; }
+  if(!data.success){ toast(data.message || 'Erreur lors de la réception'); return; }
+  await Promise.all([loadCommandes(), loadArticles()]);
+  toast(`${num} marquée comme reçue — stock mis à jour`);
+  render();
+}
+
+/* ========================= ALERTS ========================= */
+let alertesHistorique = [];
+async function renderAlerts(c){
+  state.alertsTab = state.alertsTab || 'actuelles';
+  c.innerHTML = `<div class="card"><div class="card-body"><span class="empty">Chargement...</span></div></div>`;
+  await loadArticles();
+  try{
+    const data = await apiGet('alertes_historique_list.php');
+    alertesHistorique = data.success ? data.alertes : [];
+  }catch(e){ alertesHistorique = []; }
+  fillAlertsPage(c);
+}
+function fillAlertsPage(c){
+  const tabs = [['actuelles','Alertes actuelles'],['historique','Historique']];
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="tabs">${tabs.map(([k,l])=>`<div class="tab ${state.alertsTab===k?'active':''}" onclick="setAlertsTab('${k}')">${l}</div>`).join('')}</div>
+      <div class="search-box"><span class="sic">🔍</span><input placeholder="Rechercher..." oninput="filterAlerts(this.value)"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>${state.alertsTab==='actuelles' ? 'Alertes de stock' : "Historique des alertes"}</h3></div>
+      <div class="card-body" style="padding:0">
+        ${state.alertsTab==='actuelles' ? `
+        <table>
+          <thead><tr><th>Article</th><th>Catégorie</th><th>Stock actuel</th><th>Stock minimum</th><th>Stock maximum</th><th>Emplacement</th><th>Niveau</th><th>Actions</th></tr></thead>
+          <tbody id="al-tbody"><tr><td colspan="8" class="empty">Chargement...</td></tr></tbody>
+        </table>` : `
+        <table>
+          <thead><tr><th>Date</th><th>Article</th><th>Catégorie</th><th>Stock</th><th>Seuil min</th><th>Niveau</th><th>Motif</th></tr></thead>
+          <tbody id="al-hist-tbody"><tr><td colspan="7" class="empty">Chargement...</td></tr></tbody>
+        </table>`}
+      </div>
+    </div>
+  `;
+  if(state.alertsTab==='actuelles') fillAlerts(computeAlerts());
+  else fillAlertesHistorique(alertesHistorique);
+}
+function setAlertsTab(t){ state.alertsTab=t; fillAlertsPage(document.getElementById('content')); }
+function fillAlertesHistorique(list){
+  const tbody = document.getElementById('al-hist-tbody');
+  if(!tbody) return;
+  tbody.innerHTML = list.map(a=>`
+    <tr>
+      <td class="mono">${escapeHtml(a.date_alerte)}</td>
+      <td style="font-weight:600">${escapeHtml(a.article_nom)}</td>
+      <td>${escapeHtml(a.cat)}</td>
+      <td>${a.stock}</td>
+      <td>${a.min_seuil}</td>
+      <td>${niveauBadge(a.niveau==='critique'?'Critique':'Bas')}</td>
+      <td>${escapeHtml(a.motif||'—')}</td>
+    </tr>`).join('') || `<tr><td colspan="7" class="empty">Aucune alerte enregistrée pour le moment</td></tr>`;
+}
+function computeAlerts(){
+  return articles.filter(a=>a.stock<=a.min).map(a=>({
+    art:a.nom, cat:a.cat, stock:a.stock, min:a.min, max:a.max, emp:a.emp,
+    niveau: a.stock<=0 ? 'Critique' : 'Bas',
+  })).sort((x,y)=> (x.niveau===y.niveau ? 0 : (x.niveau==='Critique'?-1:1)));
+}
+function fillAlerts(list){
+  document.getElementById('al-tbody').innerHTML = list.map(a=>`
+    <tr>
+      <td style="font-weight:600">${escapeHtml(a.art)}</td>
+      <td>${escapeHtml(a.cat)}</td>
+      <td>${a.stock}</td><td>${a.min}</td><td>${a.max}</td>
+      <td class="mono">${escapeHtml(a.emp || '—')}</td>
+      <td>${niveauBadge(a.niveau)}</td>
+      <td><div class="act-icons"><button class="view" onclick="openAlertDetail('${a.art.replace(/'/g,"\\'")}')">👁</button></div></td>
+    </tr>`).join('') || `<tr><td colspan="8" class="empty">Aucune alerte — tous les stocks sont au-dessus du minimum</td></tr>`;
+}
+function filterAlerts(q){
+  if(state.alertsTab==='historique'){
+    fillAlertesHistorique(alertesHistorique.filter(a=>fuzzyMatch(a.article_nom,q)||fuzzyMatch(a.motif||'',q)));
+  } else {
+    fillAlerts(computeAlerts().filter(a=>fuzzyMatch(a.art,q)));
+  }
+}
+function openAlertDetail(art){
+  const a = computeAlerts().find(x=>x.art===art);
+  if(!a) return;
+  openModal(a.art, `
+    <div class="detail-line"><span class="k">Catégorie</span><span class="v">${escapeHtml(a.cat)}</span></div>
+    <div class="detail-line"><span class="k">Emplacement</span><span class="v">${escapeHtml(a.emp || '—')}</span></div>
+    <div class="detail-line"><span class="k">Stock actuel</span><span class="v">${a.stock}</span></div>
+    <div class="detail-line"><span class="k">Stock minimum</span><span class="v">${a.min}</span></div>
+    <div class="detail-line"><span class="k">Stock maximum</span><span class="v">${a.max}</span></div>
+    <div class="detail-line"><span class="k">Niveau</span><span class="v">${niveauBadge(a.niveau)}</span></div>
+  `, `
+    <button class="btn btn-ghost" onclick="closeModal()">Fermer</button>
+    <button class="btn btn-blue" onclick="closeModal();state.route='stock-entries';render()">Commander</button>
+  `);
+}
+
+/* ========================= HISTORY ========================= */
+async function renderHistory(c){
+  c.innerHTML = `
+    <div class="page-head">
+      <div class="search-box"><span class="sic">🔍</span><input placeholder="Rechercher..." oninput="filterHistory(this.value)"></div>
+      <button class="btn btn-ghost" onclick="cycleHistoryFilter()" id="hist-filter-btn">⏷ Filtrer : ${histFilterLabel()}</button>
+      <button class="btn btn-blue" onclick="openExportHistoriqueModal()">⬇ Télécharger</button>
+    </div>
+    <div class="card"><div class="card-body" style="padding:0">
+      <table>
+        <thead><tr><th>N°</th><th>Article</th><th>Type</th><th>Quantité</th><th>Date</th><th>Utilisateur</th><th>Service</th></tr></thead>
+        <tbody id="hist-tbody"><tr><td colspan="7" class="empty">Chargement...</td></tr></tbody>
+      </table>
+    </div></div>
+  `;
+  await loadHistorique();
+  fillHistory(historique);
+}
+function histFilterLabel(){
+  return {toutes:'Toutes', entree:'Entrées', sortie:'Sorties'}[state.historyFilter];
+}
+function cycleHistoryFilter(){
+  const order = ['toutes','entree','sortie'];
+  state.historyFilter = order[(order.indexOf(state.historyFilter)+1)%order.length];
+  applyHistoryFilters();
+}
+let historiqueView = [];
+function fillHistory(list){
+  historiqueView = list;
+  document.getElementById('hist-tbody').innerHTML = list.map(h=>`
+    <tr>
+      <td class="mono">${h.ref_num || '-'}</td>
+      <td style="font-weight:600">${h.art}</td>
+      <td>${h.type==='sortie'?'<span class="badge red">Sortie</span>':'<span class="badge green">Entrée</span>'}</td>
+      <td class="${moveClass(h)}">${moveSign(h)}${h.qte}</td>
+      <td class="mono">${h.date}</td>
+      <td>${h.user}</td>
+      <td>${h.service || '-'}</td>
+    </tr>`).join('') || `<tr><td colspan="7" class="empty">Aucun mouvement trouvé</td></tr>`;
+}
+let historySearchQ = '';
+function filterHistory(q){ historySearchQ = q; applyHistoryFilters(); }
+function applyHistoryFilters(){
+  let list = historique;
+  if(state.historyFilter!=='toutes') list = list.filter(h=>h.type===state.historyFilter);
+  list = list.filter(h=>fuzzyMatch(h.art,historySearchQ)||fuzzyMatch(h.user,historySearchQ)||fuzzyMatch(h.motif,historySearchQ));
+  fillHistory(list);
+  const btn = document.getElementById('hist-filter-btn');
+  if(btn) btn.textContent = `⏷ Filtrer : ${histFilterLabel()}`;
+}
+
+/* ========================= EXPORT HISTORIQUE (PDF / Word / Excel) ========================= */
+const HIST_HEADERS = ['N°','Article','Type','Quantité','Date','Utilisateur','Service'];
+function histExportRows(){
+  return historiqueView.map(h=>[
+    h.ref_num || '-', h.art, h.type==='sortie' ? 'Sortie' : 'Entrée',
+    moveSign(h)+h.qte, h.date, h.user, h.service || '-'
+  ]);
+}
+function histExportStamp(){
+  const d = new Date();
+  const p = n=>String(n).padStart(2,'0');
+  return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}`;
+}
+function openExportHistoriqueModal(){
+  const n = historiqueView.length;
+  openModal("Télécharger l'historique", `
+    <p style="font-size:13px;color:var(--text-2,#667);margin:0 0 14px;">Exporter le tableau affiché (${n} mouvement${n>1?'s':''}) dans le format de ton choix.</p>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportHistoriqueFormat('pdf')">📄 &nbsp;PDF (.pdf)</button>
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportHistoriqueFormat('word')">📝 &nbsp;Word (.doc)</button>
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportHistoriqueFormat('excel')">📊 &nbsp;Excel (.xlsx)</button>
+    </div>
+  `, `<button class="btn btn-ghost" onclick="closeModal()">Annuler</button>`);
+}
+async function exportHistoriqueFormat(fmt){
+  closeModal();
+  if(!historiqueView.length){ toast('Aucun mouvement à exporter'); return; }
+  try{
+    if(fmt==='pdf') await exportHistoriquePDF();
+    else if(fmt==='word') exportHistoriqueWord();
+    else if(fmt==='excel') await exportHistoriqueExcel();
+  }catch(e){ toast("Erreur lors de l'export : " + (e.message || e)); }
+}
+function loadScriptOnce(src){
+  return new Promise((resolve, reject)=>{
+    if(document.querySelector(`script[src="${src}"]`)){ resolve(); return; }
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = ()=>resolve();
+    s.onerror = ()=>reject(new Error('Impossible de charger ' + src + ' (vérifie ta connexion internet)'));
+    document.head.appendChild(s);
+  });
+}
+async function exportHistoriqueExcel(){
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');
+  const rows = [HIST_HEADERS, ...histExportRows()];
+  const ws = XLSX.utils.aoa_to_sheet(rows);
+  ws['!cols'] = [{wch:16},{wch:22},{wch:10},{wch:10},{wch:18},{wch:16},{wch:16}];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Historique');
+  XLSX.writeFile(wb, `historique_${histExportStamp()}.xlsx`);
+  toast('Export Excel téléchargé');
+}
+async function exportHistoriquePDF(){
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js');
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape' });
+  doc.setFontSize(14);
+  doc.text('Historique des mouvements — StockPilot', 14, 15);
+  doc.autoTable({ head: [HIST_HEADERS], body: histExportRows(), startY: 20, styles: { fontSize: 9 } });
+  doc.save(`historique_${histExportStamp()}.pdf`);
+  toast('Export PDF téléchargé');
+}
+function exportHistoriqueWord(){
+  const headHtml = HIST_HEADERS.map(h=>`<th style="border:1px solid #ccc;padding:5px 9px;background:#eee;">${h}</th>`).join('');
+  const rowsHtml = histExportRows().map(r=>`<tr>${r.map(c=>`<td style="border:1px solid #ccc;padding:5px 9px;">${escapeHtml(String(c))}</td>`).join('')}</tr>`).join('');
+  const html = `<html><head><meta charset="utf-8"></head><body>
+    <h2 style="font-family:Arial;">Historique des mouvements — StockPilot</h2>
+    <table style="border-collapse:collapse;font-family:Arial;font-size:12px;">
+      <thead><tr>${headHtml}</tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+  </body></html>`;
+  const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `historique_${histExportStamp()}.doc`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('Export Word téléchargé');
+}
+
+/* ========================= EXPORT COMMANDES (PDF / Word / Excel) ========================= */
+const CMD_HEADERS = ['N° Commande','Fournisseur','Date','Montant (DT)','Statut'];
+function cmdExportRows(){
+  return commandesView.map(cm=>[
+    cm.num, cm.fournisseur, cm.date, fmt(cm.montant), cm.statut==='recue' ? 'Reçue' : 'En attente'
+  ]);
+}
+function openExportCommandesModal(){
+  const n = commandesView.length;
+  openModal('Télécharger les commandes', `
+    <p style="font-size:13px;color:var(--text-2,#667);margin:0 0 14px;">Exporter le tableau affiché (${n} commande${n>1?'s':''}) dans le format de ton choix.</p>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportCommandesFormat('pdf')">📄 &nbsp;PDF (.pdf)</button>
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportCommandesFormat('word')">📝 &nbsp;Word (.doc)</button>
+      <button class="btn btn-ghost" style="justify-content:flex-start" onclick="exportCommandesFormat('excel')">📊 &nbsp;Excel (.xlsx)</button>
+    </div>
+  `, `<button class="btn btn-ghost" onclick="closeModal()">Annuler</button>`);
+}
+async function exportCommandesFormat(fmt){
+  closeModal();
+  if(!commandesView.length){ toast('Aucune commande à exporter'); return; }
+  try{
+    if(fmt==='pdf') await exportCommandesPDF();
+    else if(fmt==='word') exportCommandesWord();
+    else if(fmt==='excel') await exportCommandesExcel();
+  }catch(e){ toast("Erreur lors de l'export : " + (e.message || e)); }
+}
+async function exportCommandesExcel(){
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');
+  const rows = [CMD_HEADERS, ...cmdExportRows()];
+  const ws = XLSX.utils.aoa_to_sheet(rows);
+  ws['!cols'] = [{wch:16},{wch:22},{wch:14},{wch:14},{wch:14}];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Commandes');
+  XLSX.writeFile(wb, `commandes_${histExportStamp()}.xlsx`);
+  toast('Export Excel téléchargé');
+}
+async function exportCommandesPDF(){
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+  await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js');
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape' });
+  doc.setFontSize(14);
+  doc.text('Commandes — StockPilot', 14, 15);
+  doc.autoTable({ head: [CMD_HEADERS], body: cmdExportRows(), startY: 20, styles: { fontSize: 9 } });
+  doc.save(`commandes_${histExportStamp()}.pdf`);
+  toast('Export PDF téléchargé');
+}
+function exportCommandesWord(){
+  const headHtml = CMD_HEADERS.map(h=>`<th style="border:1px solid #ccc;padding:5px 9px;background:#eee;">${h}</th>`).join('');
+  const rowsHtml = cmdExportRows().map(r=>`<tr>${r.map(c=>`<td style="border:1px solid #ccc;padding:5px 9px;">${escapeHtml(String(c))}</td>`).join('')}</tr>`).join('');
+  const html = `<html><head><meta charset="utf-8"></head><body>
+    <h2 style="font-family:Arial;">Commandes — StockPilot</h2>
+    <table style="border-collapse:collapse;font-family:Arial;font-size:12px;">
+      <thead><tr>${headHtml}</tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+  </body></html>`;
+  const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `commandes_${histExportStamp()}.doc`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('Export Word téléchargé');
+}
+</script>
+</body>
+</html>
